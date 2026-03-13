@@ -180,24 +180,24 @@
       display: flex;
       align-items: baseline;
       gap: 8px;
-      align-items: baseline;
       font-size: 15px;
-      flex-wrap: wrap;
     }
     .scenario-label {
+      display: inline-block;
+      width: 10em;
       white-space: nowrap;
     }
     .scenario-value {
       text-align: right;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
-      min-width: 88px;
+      width: 88px;
     }
     .scenario-meta {
       color: #66707b;
       font-size: 13px;
       white-space: nowrap;
-      min-width: 92px;
+      width: 92px;
     }
     .columns {
       display: grid;
@@ -231,10 +231,14 @@
     }
     @media (max-width: 520px) {
       .scenario-row {
+        flex-wrap: wrap;
         gap: 6px;
       }
+      .scenario-label {
+        width: auto;
+      }
       .scenario-meta {
-        min-width: 0;
+        width: auto;
       }
     }
   </style>
