@@ -11,7 +11,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
       background: #f6f7fb;
       color: #222;
-      line-height: 1.5;
+      line-height: 1.45;
     }
     .wrap {
       max-width: 900px;
@@ -55,7 +55,8 @@
     h2 {
       margin: 0 0 8px;
       font-size: 22px;
-      line-height: 1.25;
+      line-height: 1.2;
+      word-break: break-word;
     }
     .meta {
       display: flex;
@@ -78,11 +79,16 @@
       border-radius: 999px;
       font-size: 13px;
     }
-    .grid {
+    .price-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      gap: 10px 14px;
       margin-bottom: 12px;
+    }
+    .price-grid > div {
+      background: #fff;
+      border-radius: 10px;
+      min-height: 58px;
     }
     .subcard {
       background: #fafafa;
@@ -135,7 +141,7 @@
       text-decoration: underline;
     }
     @media (min-width: 760px) {
-      .grid {
+      .price-grid {
         grid-template-columns: repeat(3, 1fr);
       }
       .columns {
@@ -165,7 +171,7 @@
         <span class="badge">総合評価: 高</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>809円</div>
         <div><strong>買い指値</strong><br>776円</div>
         <div><strong>逆指値</strong><br>738円</div>
@@ -184,7 +190,7 @@
       <div class="columns">
         <div>
           <h3>理由</h3>
-          <ul><li>押し目としての価格設定（776.05）は現在値（809.0）から約4%下で自然な押し目範囲内。</li><li>利確目標は値動きベースで設定されており、5〜10営業日での達成可能性が高い。</li></ul>
+          <ul><li>押し目としての価格設定（776.05）は現在値（809.0）から約4%下で自然な押し目範囲内。</li><li>逆指値（738.25）はATRの約0.8倍下で近すぎず遠すぎず適切。</li></ul>
         </div>
         <div>
           <h3>リスク</h3>
@@ -207,7 +213,7 @@
         <span class="badge">総合評価: 高</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>1,000円</div>
         <div><strong>買い指値</strong><br>996円</div>
         <div><strong>逆指値</strong><br>955円</div>
@@ -226,11 +232,11 @@
       <div class="columns">
         <div>
           <h3>理由</h3>
-          <ul><li>押し目としての価格設定が直近の安値圏（low7=976.1, low10=963.7）に近く自然な押し目と判断できる</li><li>買い指値995.5は現在値1000.5から約0.5%下で無理のない範囲に設定されている</li></ul>
+          <ul><li>押し目としての価格設定が直近の安値圏（, ）に近く自然な押し目と判断できる</li><li>買い指値995.5は現在値1000.5から約0.5%下で無理のない範囲に設定されている</li></ul>
         </div>
         <div>
           <h3>リスク</h3>
-          <ul><li>5日リターンがマイナス（-2.25%）で短期的な押し目の深さに注意が必要</li></ul>
+          <ul><li>直近の出来高がやや低め（）で流動性リスクがある</li><li>5日リターンがマイナス（-2.25%）で短期的な押し目の深さに注意が必要</li></ul>
         </div>
       </div>
     </section>
@@ -249,7 +255,7 @@
         <span class="badge">総合評価: 高</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>3,897円</div>
         <div><strong>買い指値</strong><br>3,878円</div>
         <div><strong>逆指値</strong><br>3,746円</div>
@@ -268,7 +274,7 @@
       <div class="columns">
         <div>
           <h3>理由</h3>
-          <ul><li>押し目としての価格設定が現在値3897円に対し3877.51円と自然な範囲である</li><li>逆指値3746.11円は値動き2倍のリスクを考慮し、近すぎず遠すぎず適切</li></ul>
+          <ul><li>押し目としての価格設定が現在値3897円に対し3877.51円と自然な範囲である</li><li>逆指値3746.11円は倍のリスクを考慮し、近すぎず遠すぎず適切</li></ul>
         </div>
         <div>
           <h3>リスク</h3>
@@ -291,7 +297,7 @@
         <span class="badge">総合評価: 中</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>3,955円</div>
         <div><strong>買い指値</strong><br>3,935円</div>
         <div><strong>逆指値</strong><br>3,743円</div>
@@ -333,7 +339,7 @@
         <span class="badge">総合評価: 中</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>2,000円</div>
         <div><strong>買い指値</strong><br>1,941円</div>
         <div><strong>逆指値</strong><br>1,854円</div>
@@ -375,7 +381,7 @@
         <span class="badge">総合評価: 中</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>5,649円</div>
         <div><strong>買い指値</strong><br>5,581円</div>
         <div><strong>逆指値</strong><br>5,036円</div>
@@ -417,7 +423,7 @@
         <span class="badge">総合評価: 中</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>15,110円</div>
         <div><strong>買い指値</strong><br>14,398円</div>
         <div><strong>逆指値</strong><br>12,776円</div>
@@ -459,7 +465,7 @@
         <span class="badge">総合評価: 低</span>
       </div>
 
-      <div class="grid">
+      <div class="price-grid">
         <div><strong>現在値</strong><br>2,520円</div>
         <div><strong>買い指値</strong><br>2,507円</div>
         <div><strong>逆指値</strong><br>2,456円</div>
@@ -478,7 +484,7 @@
       <div class="columns">
         <div>
           <h3>理由</h3>
-          <ul><li>押し目として2520から2507.4への指値は自然で無理がない</li><li>逆指値2455.57は値動き(58.1)の約1倍弱で近すぎず遠すぎず適切</li></ul>
+          <ul><li>押し目として2520から2507.4への指値は自然で無理がない</li><li>逆指値2455.57はの約1倍弱で近すぎず遠すぎず適切</li></ul>
         </div>
         <div>
           <h3>リスク</h3>
@@ -490,7 +496,7 @@
 
     <section class="history">
       <h3>過去レポート</h3>
-      <p>まだ履歴はありません。</p>
+      <ul class='history-list'><li><a href="history/2026-03-13.html">2026-03-13</a></li></ul>
     </section>
   </div>
 </body>
