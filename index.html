@@ -177,27 +177,24 @@
       gap: 8px;
     }
     .scenario-row {
-      display: flex;
+      display: grid;
+      grid-template-columns: 11em 7em 9em;
+      column-gap: 10px;
       align-items: baseline;
-      gap: 8px;
       font-size: 15px;
     }
     .scenario-label {
-      display: inline-block;
-      width: 10em;
       white-space: nowrap;
     }
     .scenario-value {
       text-align: right;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
-      width: 88px;
     }
     .scenario-meta {
       color: #66707b;
       font-size: 13px;
       white-space: nowrap;
-      width: 92px;
     }
     .columns {
       display: grid;
@@ -231,14 +228,15 @@
     }
     @media (max-width: 520px) {
       .scenario-row {
-        flex-wrap: wrap;
-        gap: 6px;
+        grid-template-columns: 1fr auto;
+        column-gap: 8px;
+        row-gap: 2px;
       }
-      .scenario-label {
-        width: auto;
+      .scenario-value {
+        min-width: 0;
       }
       .scenario-meta {
-        width: auto;
+        grid-column: 2;
       }
     }
   </style>
