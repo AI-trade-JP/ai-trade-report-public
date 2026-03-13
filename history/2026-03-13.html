@@ -29,8 +29,22 @@
     }
     .lead {
       color: #666;
-      margin: 0 0 18px;
+      margin: 0 0 12px;
       font-size: 14px;
+    }
+    .history-top {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .history-top a {
+      color: #777;
+      text-decoration: none;
+      margin-right: 6px;
+    }
+    .history-top a:hover {
+      text-decoration: underline;
     }
     .note {
       background: #fff7e8;
@@ -81,14 +95,18 @@
     }
     .price-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px 10px;
       margin-bottom: 12px;
     }
     .price-grid > div {
       background: #fff;
       border-radius: 10px;
       min-height: 58px;
+      font-size: 15px;
+    }
+    .price-grid strong {
+      font-size: 14px;
     }
     .subcard {
       background: #fafafa;
@@ -119,31 +137,7 @@
     li {
       margin-bottom: 6px;
     }
-    .history {
-      background: white;
-      border-radius: 16px;
-      padding: 16px;
-      margin-top: 20px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    }
-    .history h3 {
-      margin-top: 0;
-    }
-    .history-list {
-      margin: 0;
-      padding-left: 18px;
-    }
-    .history a {
-      color: #1d4ed8;
-      text-decoration: none;
-    }
-    .history a:hover {
-      text-decoration: underline;
-    }
     @media (min-width: 760px) {
-      .price-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
       .columns {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -155,6 +149,9 @@
     <div class="date">2026-03-13</div>
     <h1>今日のおすすめ短期銘柄</h1>
     <p class="lead">上昇トレンド押し目型の候補を、公開向けに見やすく整理したレポートです。</p>
+    <div class="history-top">
+      <strong>過去レポート:</strong> <a href="history/2026-03-13.html">2026-03-13</a>
+    </div>
     <div class="note">注記: この公開版は参考用です。内部ロジックの詳細値は省略し、100株前提の見やすい形式に絞っています。</div>
     
     <section class="card">
@@ -358,7 +355,7 @@
       <div class="columns">
         <div>
           <h3>理由</h3>
-          <ul><li>押し目としてma20付近かつ低値圏に近く自然な押し目と判断できる</li><li>買い指値は現在値2000.5に対し1940.52で無理のない範囲</li></ul>
+          <ul><li>買い指値は現在値2000.5に対し1940.52で無理のない範囲</li><li>逆指値は約86円幅でATRの約0.7倍程度、近すぎず遠すぎず適切</li></ul>
         </div>
         <div>
           <h3>リスク</h3>
@@ -493,11 +490,6 @@
       </div>
     </section>
     
-
-    <section class="history">
-      <h3>過去レポート</h3>
-      <ul class='history-list'><li><a href="history/2026-03-13.html">2026-03-13</a></li></ul>
-    </section>
   </div>
 </body>
 </html>
