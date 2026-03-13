@@ -172,6 +172,30 @@
     .subcard p {
       margin: 8px 0;
     }
+    .scenario-list {
+      display: grid;
+      gap: 8px;
+    }
+    .scenario-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(88px, auto) minmax(110px, auto);
+      gap: 10px;
+      align-items: baseline;
+      font-size: 15px;
+    }
+    .scenario-label {
+      min-width: 0;
+    }
+    .scenario-value {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .scenario-meta {
+      color: #66707b;
+      font-size: 13px;
+      white-space: nowrap;
+    }
     .columns {
       display: grid;
       grid-template-columns: 1fr;
@@ -200,6 +224,14 @@
     @media (min-width: 760px) {
       .columns {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 520px) {
+      .scenario-row {
+        grid-template-columns: minmax(0, 1fr) auto;
+      }
+      .scenario-meta {
+        grid-column: 2;
       }
     }
   </style>
@@ -250,10 +282,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -3,263円</p>
-        <p>短期利確到達時: +2,313円（利益倍率 0.7倍）</p>
-        <p>中期利確①到達時: +9,400円（利益倍率 2.9倍）</p>
-        <p>中期利確②到達時: +14,100円（利益倍率 4.3倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-3,263円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+2,313円</span>
+            <span class="scenario-meta">（利益倍率 0.7倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+9,400円</span>
+            <span class="scenario-meta">（利益倍率 2.9倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+14,100円</span>
+            <span class="scenario-meta">（利益倍率 4.3倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -297,10 +346,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -7,090円</p>
-        <p>短期利確到達時: +5,775円（利益倍率 0.8倍）</p>
-        <p>中期利確①到達時: +23,940円（利益倍率 3.4倍）</p>
-        <p>中期利確②到達時: +35,910円（利益倍率 5.1倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-7,090円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+5,775円</span>
+            <span class="scenario-meta">（利益倍率 0.8倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+23,940円</span>
+            <span class="scenario-meta">（利益倍率 3.4倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+35,910円</span>
+            <span class="scenario-meta">（利益倍率 5.1倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -344,10 +410,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -41,840円</p>
-        <p>短期利確到達時: +16,362円（利益倍率 0.4倍）</p>
-        <p>中期利確①到達時: +47,660円（利益倍率 1.1倍）</p>
-        <p>中期利確②到達時: +71,490円（利益倍率 1.7倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-41,840円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+16,362円</span>
+            <span class="scenario-meta">（利益倍率 0.4倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+47,660円</span>
+            <span class="scenario-meta">（利益倍率 1.1倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+71,490円</span>
+            <span class="scenario-meta">（利益倍率 1.7倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -391,10 +474,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -11,616円</p>
-        <p>短期利確到達時: +16,590円（利益倍率 1.4倍）</p>
-        <p>中期利確①到達時: +16,590円（利益倍率 1.4倍）</p>
-        <p>中期利確②到達時: +20,273円（利益倍率 1.7倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-11,616円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+16,590円</span>
+            <span class="scenario-meta">（利益倍率 1.4倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+16,590円</span>
+            <span class="scenario-meta">（利益倍率 1.4倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+20,273円</span>
+            <span class="scenario-meta">（利益倍率 1.7倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -438,10 +538,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -12,403円</p>
-        <p>短期利確到達時: +14,030円（利益倍率 1.1倍）</p>
-        <p>中期利確①到達時: +14,030円（利益倍率 1.1倍）</p>
-        <p>中期利確②到達時: +21,045円（利益倍率 1.7倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-12,403円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+14,030円</span>
+            <span class="scenario-meta">（利益倍率 1.1倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+14,030円</span>
+            <span class="scenario-meta">（利益倍率 1.1倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+21,045円</span>
+            <span class="scenario-meta">（利益倍率 1.7倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -485,10 +602,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -14,838円</p>
-        <p>短期利確到達時: +18,050円（利益倍率 1.2倍）</p>
-        <p>中期利確①到達時: +18,050円（利益倍率 1.2倍）</p>
-        <p>中期利確②到達時: +20,369円（利益倍率 1.4倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-14,838円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+18,050円</span>
+            <span class="scenario-meta">（利益倍率 1.2倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+18,050円</span>
+            <span class="scenario-meta">（利益倍率 1.2倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+20,369円</span>
+            <span class="scenario-meta">（利益倍率 1.4倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -532,10 +666,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -8,974円</p>
-        <p>短期利確到達時: +15,456円（利益倍率 1.7倍）</p>
-        <p>中期利確①到達時: +15,456円（利益倍率 1.7倍）</p>
-        <p>中期利確②到達時: +24,300円（利益倍率 2.7倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-8,974円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+15,456円</span>
+            <span class="scenario-meta">（利益倍率 1.7倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+15,456円</span>
+            <span class="scenario-meta">（利益倍率 1.7倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+24,300円</span>
+            <span class="scenario-meta">（利益倍率 2.7倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
@@ -579,10 +730,27 @@
 
       <div class="subcard">
         <h3>100株の場合</h3>
-        <p>逆指値まで: -303,327円</p>
-        <p>短期利確到達時: +71,454円（利益倍率 0.2倍）</p>
-        <p>中期利確①到達時: +383,550円（利益倍率 1.3倍）</p>
-        <p>中期利確②到達時: +575,325円（利益倍率 1.9倍）</p>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-value">-303,327円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-value">+71,454円</span>
+            <span class="scenario-meta">（利益倍率 0.2倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+383,550円</span>
+            <span class="scenario-meta">（利益倍率 1.3倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+575,325円</span>
+            <span class="scenario-meta">（利益倍率 1.9倍）</span>
+          </div>
+        </div>
       </div>
 
       <div class="columns">
