@@ -177,24 +177,27 @@
       gap: 8px;
     }
     .scenario-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(88px, auto) minmax(110px, auto);
-      gap: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       align-items: baseline;
       font-size: 15px;
+      flex-wrap: wrap;
     }
     .scenario-label {
-      min-width: 0;
+      white-space: nowrap;
     }
     .scenario-value {
       text-align: right;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
+      min-width: 88px;
     }
     .scenario-meta {
       color: #66707b;
       font-size: 13px;
       white-space: nowrap;
+      min-width: 92px;
     }
     .columns {
       display: grid;
@@ -228,10 +231,10 @@
     }
     @media (max-width: 520px) {
       .scenario-row {
-        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 6px;
       }
       .scenario-meta {
-        grid-column: 2;
+        min-width: 0;
       }
     }
   </style>
