@@ -177,24 +177,27 @@
       gap: 8px;
     }
     .scenario-row {
-      display: grid;
-      grid-template-columns: 11em 7em 9em;
-      column-gap: 10px;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
       align-items: baseline;
       font-size: 15px;
+      flex-wrap: wrap;
     }
     .scenario-label {
       white-space: nowrap;
     }
     .scenario-value {
-      text-align: right;
       font-variant-numeric: tabular-nums;
       white-space: nowrap;
+      min-width: 88px;
+      text-align: right;
     }
     .scenario-meta {
       color: #66707b;
       font-size: 13px;
       white-space: nowrap;
+      min-width: 92px;
     }
     .columns {
       display: grid;
@@ -228,15 +231,13 @@
     }
     @media (max-width: 520px) {
       .scenario-row {
-        grid-template-columns: 1fr auto;
-        column-gap: 8px;
-        row-gap: 2px;
+        gap: 6px;
       }
       .scenario-value {
         min-width: 0;
       }
       .scenario-meta {
-        grid-column: 2;
+        min-width: 0;
       }
     }
   </style>
@@ -260,70 +261,6 @@
     
     <section class="card">
       <div class="rank">1位</div>
-      <h2>9115 明海グループ</h2>
-
-      <div class="meta">
-        <span>業種: 海運業</span>
-        <span>戦略タイプ: 上昇トレンド押し目型</span>
-      </div>
-
-      <div class="sector-filter-note">地合い弱めのため、強い業種を優先表示</div>
-
-      <div class="badges">
-        <span class="badge">AI評価: 85 / 100（高）</span>
-        <span class="badge">総合評価: 高</span>
-        <span class="badge">共通エントリー / 複数出口案</span>
-      </div>
-
-      <div class="price-grid">
-        <div><strong>現在値</strong><br>809円</div>
-        <div><strong>買い指値</strong><br>771円</div>
-        <div><strong>逆指値</strong><br>738円</div>
-        <div><strong>短期利確</strong><br>794円<br><small>目安期間 1〜5営業日</small></div>
-        <div><strong>中期利確①</strong><br>865円<br><small>目安期間 5〜10営業日</small></div>
-        <div><strong>中期利確②</strong><br>912円<br><small>目安期間 5〜10営業日</small></div>
-        <div><strong>逆指値まで</strong><br>約 4.0%</div>
-      </div>
-
-      <div class="subcard">
-        <h3>100株の場合</h3>
-        <div class="scenario-list">
-          <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
-            <span class="scenario-value">-3,263円</span>
-          </div>
-          <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
-            <span class="scenario-value">+2,313円</span>
-            <span class="scenario-meta">（利益倍率 0.7倍）</span>
-          </div>
-          <div class="scenario-row">
-            <span class="scenario-label">中期利確①到達時</span>
-            <span class="scenario-value">+9,400円</span>
-            <span class="scenario-meta">（利益倍率 2.9倍）</span>
-          </div>
-          <div class="scenario-row">
-            <span class="scenario-label">中期利確②到達時</span>
-            <span class="scenario-value">+14,100円</span>
-            <span class="scenario-meta">（利益倍率 4.3倍）</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div>
-          <h3>分析の要点</h3>
-          <ul><li>押し目として770円は現在値809円から無理のない範囲で自然な価格設定です。</li><li>逆指値738円は想定リスク約4％で近すぎず遠すぎず適切です。</li></ul>
-        </div>
-        <div>
-          <h3>想定リスク</h3>
-          <ul><li>相場環境の急変による押し目割れリスク</li><li>想定以上の下落で逆指値にかかる可能性</li></ul>
-        </div>
-      </div>
-    </section>
-    
-    <section class="card">
-      <div class="rank">2位</div>
       <h2>6965 浜松ホトニクス</h2>
 
       <div class="meta">
@@ -353,11 +290,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-7,090円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+5,775円</span>
             <span class="scenario-meta">（利益倍率 0.8倍）</span>
           </div>
@@ -377,17 +314,17 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目として価格帯が自然で、直近の安値付近に指値を置いているため無理がない。</li><li>逆指値は想定リスク約3.5%で、近すぎず遠すぎず適切な位置に設定されている。</li></ul>
+          <ul><li>押し目として価格帯が自然で、直近の安値付近に設定されているため無理のない買い指値となっている。</li><li>逆指値は現在値から約7%下で、損切り幅として適切な範囲にあり近すぎず遠すぎない。</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>想定リスクは適切だが、急激な相場変動で逆指値にかかる可能性がある。</li><li>出来高がやや低めのため、流動性不足による約定遅れやスリッページのリスクがある。</li></ul>
+          <ul><li>想定リスク約3.5%の損切り幅があるため、相場急変時には損失が拡大する可能性がある。</li><li>買い指値が現在値より約75円下のため、押し目が浅い場合はエントリーできず見送りになるリスクがある。</li></ul>
         </div>
       </div>
     </section>
     
     <section class="card">
-      <div class="rank">3位</div>
+      <div class="rank">2位</div>
       <h2>6841 横河電機</h2>
 
       <div class="meta">
@@ -417,11 +354,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-41,840円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+16,362円</span>
             <span class="scenario-meta">（利益倍率 0.4倍）</span>
           </div>
@@ -441,17 +378,17 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目買いとして価格設定が自然で、現在値から無理のない範囲に買い指値がある。</li><li>逆指値は約7％の下落余地を確保しており、近すぎず遠すぎず適切な位置に設定されている。</li></ul>
+          <ul><li>押し目買いとして価格設定が自然で、現在値から無理のない範囲に指値がある</li><li>逆指値は想定リスク約7.4％で近すぎず遠すぎず適切な位置に設定されている</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>想定リスク約7.4％の下落が発生した場合の損失。</li><li>短期利確ポイントが現在値を下回っているため、早期の利益確定がやや控えめ。</li></ul>
+          <ul><li>想定リスクは約7.4％とやや大きめなので資金管理が重要</li><li>押し目の深さがやや大きいため、反発しない場合は損切りが必要になる可能性がある</li></ul>
         </div>
       </div>
     </section>
     
     <section class="card">
-      <div class="rank">4位</div>
+      <div class="rank">3位</div>
       <h2>2269 明治ホールディングス</h2>
 
       <div class="meta">
@@ -481,11 +418,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-11,616円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+16,590円</span>
             <span class="scenario-meta">（利益倍率 1.4倍）</span>
           </div>
@@ -505,17 +442,17 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目買いとして価格設定が自然で、現在値から無理のない範囲に買い指値がある。</li><li>逆指値は約3％のリスク幅で、近すぎず遠すぎず適切に設定されている。</li></ul>
+          <ul><li>押し目として価格設定が自然で、現在値から無理のない範囲に買い指値がある</li><li>逆指値は想定リスク約3％で近すぎず遠すぎず適切な位置に設定されている</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>想定リスクは約3％であるが、相場急変時には損失拡大の可能性がある。</li><li>押し目の深さが浅いため、押し目形成が崩れた場合は見送りが必要。</li></ul>
+          <ul><li>相場急変時に逆指値にかかる可能性がある</li><li>想定外の押し目の深さや戻りの鈍さで利確に時間がかかるリスク</li></ul>
         </div>
       </div>
     </section>
     
     <section class="card">
-      <div class="rank">5位</div>
+      <div class="rank">4位</div>
       <h2>2590 ダイドーグループホールディングス</h2>
 
       <div class="meta">
@@ -545,11 +482,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-12,403円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+14,030円</span>
             <span class="scenario-meta">（利益倍率 1.1倍）</span>
           </div>
@@ -569,11 +506,75 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目として価格帯が現在値より適度に下がっており自然な設定です。</li><li>買い指値は無理のない範囲で、無理に買いを急がせていません。</li></ul>
+          <ul><li>押し目として価格帯が自然で、現在値から適度に下がった水準に買い指値が設定されている。</li><li>逆指値は想定リスク約4.5%で、近すぎず遠すぎず適切な位置にある。</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>押し目が深すぎる場合、戻りが鈍くなる可能性があること。</li><li>市場環境の急変による想定外の下落リスク。</li></ul>
+          <ul><li>押し目が深すぎる場合、反発が弱い可能性がある。</li><li>相場全体の急変動により逆指値にかかるリスクがある。</li></ul>
+        </div>
+      </div>
+    </section>
+    
+    <section class="card">
+      <div class="rank">5位</div>
+      <h2>9115 明海グループ</h2>
+
+      <div class="meta">
+        <span>業種: 海運業</span>
+        <span>戦略タイプ: 上昇トレンド押し目型</span>
+      </div>
+
+      <div class="sector-filter-note">地合い弱めのため、強い業種を優先表示</div>
+
+      <div class="badges">
+        <span class="badge">AI評価: 75 / 100（中）</span>
+        <span class="badge">総合評価: 中</span>
+        <span class="badge">共通エントリー / 複数出口案</span>
+      </div>
+
+      <div class="price-grid">
+        <div><strong>現在値</strong><br>809円</div>
+        <div><strong>買い指値</strong><br>771円</div>
+        <div><strong>逆指値</strong><br>738円</div>
+        <div><strong>短期利確</strong><br>794円<br><small>目安期間 1〜5営業日</small></div>
+        <div><strong>中期利確①</strong><br>865円<br><small>目安期間 5〜10営業日</small></div>
+        <div><strong>中期利確②</strong><br>912円<br><small>目安期間 5〜10営業日</small></div>
+        <div><strong>逆指値まで</strong><br>約 4.0%</div>
+      </div>
+
+      <div class="subcard">
+        <h3>100株の場合</h3>
+        <div class="scenario-list">
+          <div class="scenario-row">
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span class="scenario-value">-3,263円</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
+            <span class="scenario-value">+2,313円</span>
+            <span class="scenario-meta">（利益倍率 0.7倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確①到達時</span>
+            <span class="scenario-value">+9,400円</span>
+            <span class="scenario-meta">（利益倍率 2.9倍）</span>
+          </div>
+          <div class="scenario-row">
+            <span class="scenario-label">中期利確②到達時</span>
+            <span class="scenario-value">+14,100円</span>
+            <span class="scenario-meta">（利益倍率 4.3倍）</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>分析の要点</h3>
+          <ul><li>押し目として価格770円は現在値809円から無理のない範囲で自然な位置にある</li><li>逆指値738円は想定リスク約4％で近すぎず遠すぎず適切な設定</li></ul>
+        </div>
+        <div>
+          <h3>想定リスク</h3>
+          <ul><li>押し目価格に届かず反発が弱い場合はエントリーできない可能性がある</li><li>市場環境の急変や業績悪化による下落リスクがある</li></ul>
         </div>
       </div>
     </section>
@@ -609,11 +610,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-14,838円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+18,050円</span>
             <span class="scenario-meta">（利益倍率 1.2倍）</span>
           </div>
@@ -633,11 +634,11 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目として価格が現在値から適度に下がっており自然な設定です。</li><li>買い指値は現在値から無理のない範囲で、過度な割安感を狙っていません。</li></ul>
+          <ul><li>押し目として価格設定が自然で、現在値から無理なく買い指値を置いている。</li><li>逆指値は約3.8%のリスク幅で、近すぎず遠すぎず適切な位置に設定されている。</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>市場の急変動による逆指値到達リスク</li><li>押し目の深さが想定より浅く、エントリータイミングがずれる可能性</li></ul>
+          <ul><li>相場の急変による逆指値到達リスク。</li><li>押し目の深さが想定より深くなる可能性。</li></ul>
         </div>
       </div>
     </section>
@@ -673,11 +674,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-8,974円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+15,456円</span>
             <span class="scenario-meta">（利益倍率 1.7倍）</span>
           </div>
@@ -697,11 +698,11 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目として価格設定が現在値から適度に下がっており自然な範囲である</li><li>逆指値は想定リスク約2.5%で近すぎず遠すぎず適切な位置に設定されている</li></ul>
+          <ul><li>押し目買いとして価格設定が自然で、現在値から無理のない範囲に買い指値がある</li><li>逆指値は約2.5%のリスク幅で、近すぎず遠すぎず適切な位置に設定されている</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>市場環境の急変による押し目の深堀りリスク</li><li>想定以上の下落で逆指値にかかり早期損切りとなる可能性</li></ul>
+          <ul><li>想定外の急落による損切りリスク</li><li>市場全体の急変動で利確目標に届かない可能性</li></ul>
         </div>
       </div>
     </section>
@@ -737,11 +738,11 @@
         <h3>100株の場合</h3>
         <div class="scenario-list">
           <div class="scenario-row">
-            <span class="scenario-label">逆指値まで</span>
+            <span class="scenario-label">逆指値まで&nbsp;&nbsp;&nbsp;&nbsp;</span>
             <span class="scenario-value">-303,327円</span>
           </div>
           <div class="scenario-row">
-            <span class="scenario-label">短期利確到達時</span>
+            <span class="scenario-label">短期利確到達時&nbsp;&nbsp;</span>
             <span class="scenario-value">+71,454円</span>
             <span class="scenario-meta">（利益倍率 0.2倍）</span>
           </div>
@@ -761,11 +762,11 @@
       <div class="columns">
         <div>
           <h3>分析の要点</h3>
-          <ul><li>押し目として価格が現在値より約7%下で自然な範囲に設定されている</li><li>買い指値は現在値から無理のない範囲で、押し目買いの典型的な位置にある</li></ul>
+          <ul><li>押し目として価格が現在値より十分下がっており自然な範囲である</li><li>買い指値は無理なく設定されており、無理に買わせる設計ではない</li></ul>
         </div>
         <div>
           <h3>想定リスク</h3>
-          <ul><li>逆指値がやや遠いため、損失が大きくなる可能性がある</li><li>短期利確ポイントが現在値より低いため、早期の利益確定が必要な場面も想定される</li></ul>
+          <ul><li>買い指値までの下落が続く可能性がある</li><li>逆指値にかかると損失が想定より大きくなるリスク</li></ul>
         </div>
       </div>
     </section>
