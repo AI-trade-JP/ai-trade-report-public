@@ -42,6 +42,36 @@
       background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px;
       font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6;
     }
+    .summary-box {
+      background: #fff7e8;
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      margin-bottom: 18px;
+      border: 1px solid #f4e4bd;
+    }
+    .summary-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #5c4a1a;
+      margin-bottom: 10px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .summary-grid > div {
+      min-height: 54px;
+      font-size: 14px;
+    }
+    .summary-grid strong {
+      font-size: 13px;
+    }
+    .summary-note {
+      margin: 10px 0 0;
+      font-size: 12px;
+      color: #7a6a38;
+    }
     .card {
       background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.045); border: 1px solid rgba(230, 235, 245, 0.9);
@@ -116,6 +146,9 @@
       color: #7b8693;
       font-size: 13px;
     }
+    @media (min-width: 760px) {
+      .summary-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (min-width: 760px) { .columns { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
@@ -131,13 +164,27 @@
         <a href="history/">過去の分析一覧へ</a>
       </div>
       <div class="history-top">
-        <span class="history-label">保存件数:</span>2件
+        <span class="history-label">保存件数:</span>10件
       </div>
     </section>
     <div class="note">
       このページは、まだ大きくは上がっていない銘柄や、上がり始めの入口に見える銘柄を毎日ピックアップする一覧です。
       テーマや信用残などの外部データはまだ未接続なので、主に価格・出来高・値動きの形から候補を出しています。
     </div>
+    
+    <div class="summary-box">
+      <div class="summary-title">この日の平均成績</div>
+      <div class="summary-grid">
+        <div><strong>追跡できた銘柄数</strong><br>8件</div>
+        <div><strong>終値ベース平均</strong><br>0.00%</div>
+        <div><strong>途中の最大上昇平均</strong><br>3.05%</div>
+        <div><strong>途中の最大下落平均</strong><br>-3.54%</div>
+        <div><strong>終値でプラスだった数</strong><br>4/8</div>
+        <div><strong>5%以上上がった数</strong><br>2/8</div>
+      </div>
+      <p class="summary-note">追跡日数: 8-8営業日。新しい日付ほど、まだ10営業日分は埋まり切っていません。</p>
+    </div>
+        
     
     <section class="card">
       <div class="rank">1位</div>

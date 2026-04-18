@@ -42,6 +42,36 @@
       background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px;
       font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6;
     }
+    .summary-box {
+      background: #fff7e8;
+      border-radius: 16px;
+      padding: 14px 14px 12px;
+      margin-bottom: 18px;
+      border: 1px solid #f4e4bd;
+    }
+    .summary-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #5c4a1a;
+      margin-bottom: 10px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .summary-grid > div {
+      min-height: 54px;
+      font-size: 14px;
+    }
+    .summary-grid strong {
+      font-size: 13px;
+    }
+    .summary-note {
+      margin: 10px 0 0;
+      font-size: 12px;
+      color: #7a6a38;
+    }
     .card {
       background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px;
       box-shadow: 0 8px 22px rgba(0,0,0,0.045); border: 1px solid rgba(230, 235, 245, 0.9);
@@ -116,6 +146,9 @@
       color: #7b8693;
       font-size: 13px;
     }
+    @media (min-width: 760px) {
+      .summary-grid { grid-template-columns: repeat(3, 1fr); }
+    }
     @media (min-width: 760px) { .columns { grid-template-columns: repeat(2, 1fr); } }
   </style>
 </head>
@@ -138,6 +171,7 @@
       このページは、まだ大きくは上がっていない銘柄や、上がり始めの入口に見える銘柄を毎日ピックアップする一覧です。
       テーマや信用残などの外部データはまだ未接続なので、主に価格・出来高・値動きの形から候補を出しています。
     </div>
+    
     
     <section class="card">
       <div class="rank">1位</div>
