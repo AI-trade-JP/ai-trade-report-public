@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026年4月15日 ステルス仕込み候補</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: radial-gradient(circle at top left, #f8fbff 0%, #f4f6fb 38%, #eef2f9 100%);
+      color: #222;
+      line-height: 1.45;
+    }
+    .wrap { max-width: 940px; margin: 0 auto; padding: 20px 16px 24px; }
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 50%, #eef4ff 100%);
+      border: 1px solid #e6edf8;
+      border-radius: 22px;
+      padding: 22px 18px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(27, 45, 94, 0.06);
+    }
+    .hero-date { font-size: 30px; font-weight: 800; color: #2f3a46; margin-bottom: 6px; }
+    .hero-title { font-size: 30px; font-weight: 800; color: #1f2937; margin: 0 0 14px 18px; }
+    .lead { color: #51606f; margin: 0 0 8px; font-size: 14px; }
+    .sublead { color: #7a8591; margin: 0; font-size: 12px; }
+    .history-top { text-align: right; font-size: 12px; color: #7a8591; margin-top: 12px; line-height: 1.7; }
+    .history-top a { color: #6c7683; text-decoration: none; margin-left: 6px; }
+    .history-label { color: #66707b; margin-right: 6px; }
+    .nav-links { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav-links a {
+      background: linear-gradient(180deg, #edf2ff 0%, #e7edff 100%);
+      color: #334;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #dce4ff;
+      text-decoration: none;
+    }
+    .note {
+      background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px;
+      font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6;
+    }
+    .card {
+      background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.045); border: 1px solid rgba(230, 235, 245, 0.9);
+    }
+    .rank { font-size: 13px; color: #777; margin-bottom: 4px; }
+    h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.2; word-break: break-word; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #666; margin-bottom: 6px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .badge {
+      background: linear-gradient(180deg, #edf2ff 0%, #e7edff 100%);
+      color: #334; padding: 6px 10px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff;
+    }
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 10px; margin-bottom: 12px; }
+    .price-grid > div { min-height: 56px; font-size: 15px; }
+    .price-grid strong { font-size: 14px; }
+    .columns { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .columns h3 { margin: 0 0 6px; font-size: 18px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .tracking-details {
+      margin-top: 14px;
+      border-top: 1px solid #e7ebf3;
+      padding-top: 12px;
+    }
+    .tracking-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #334b74;
+      margin-bottom: 10px;
+    }
+    .tracking-note {
+      margin: 10px 0 8px;
+      color: #566272;
+      font-size: 13px;
+    }
+    .tracking-summary {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .tracking-summary span {
+      background: #f4f7fc;
+      border: 1px solid #e2e8f3;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #445266;
+    }
+    .tracking-table-wrap {
+      overflow-x: auto;
+    }
+    .tracking-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .tracking-table th, .tracking-table td {
+      border-bottom: 1px solid #edf1f7;
+      padding: 8px 6px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .tracking-table th:nth-child(1),
+    .tracking-table th:nth-child(2),
+    .tracking-table td:nth-child(1),
+    .tracking-table td:nth-child(2) {
+      text-align: left;
+    }
+    .tracking-empty {
+      margin-top: 12px;
+      color: #7b8693;
+      font-size: 13px;
+    }
+    @media (min-width: 760px) { .columns { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-date">2026年4月15日</div>
+      <div class="hero-title">ステルス仕込み候補</div>
+      <p class="lead">毎日19:30ごろ更新。日本株の引け後データをもとに、静かな仕込みや初動入口を探すための候補一覧です。</p>
+      <p class="sublead">分析基準日: 2026-04-14</p>
+      <div class="nav-links">
+        <a href="../">押し目候補ページへ</a>
+        <a href="history/">過去の分析一覧へ</a>
+      </div>
+      <div class="history-top">
+        <span class="history-label">保存件数:</span>7件
+      </div>
+    </section>
+    <div class="note">
+      このページは、まだ大きくは上がっていない銘柄や、上がり始めの入口に見える銘柄を毎日ピックアップする一覧です。
+      テーマや信用残などの外部データはまだ未接続なので、主に価格・出来高・値動きの形から候補を出しています。
+    </div>
+    
+    <section class="card">
+      <div class="rank">1位</div>
+      <h2>3632 グリーホールディングス</h2>
+      <div class="meta">
+        <span>業種: 情報･通信業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: 少し動意づいている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 63.10</span>
+        <span class="badge">売買代金の目安: 2.0億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>377円</div>
+        <div><strong>直近10日騰落率</strong><br>2.17%</div>
+        <div><strong>直近10日最大上昇率</strong><br>5.69%</div>
+        <div><strong>20日最大下落率</strong><br>-6.67%</div>
+        <div><strong>急な下落の回数</strong><br>0.16</div>
+        <div><strong>日中の値動き幅</strong><br>1.77</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: 少し動意づいている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -6.67%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 5.69%</li><li>直近10日の着地: 2.17%</li><li>売買の厚み: 20日平均売買代金 2.0億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 381円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 2.36%</span><span>最大含み損 -0.26%</span><span>最新終値ベース 1.57%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>384円</td><td>380円</td><td>382円</td><td>0.79%</td><td>-0.26%</td><td>0.26%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>389円</td><td>384円</td><td>387円</td><td>2.10%</td><td>0.79%</td><td>1.57%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>390円</td><td>386円</td><td>387円</td><td>2.36%</td><td>1.31%</td><td>1.57%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">2位</div>
+      <h2>2982 ＡＤワークスグループ</h2>
+      <div class="meta">
+        <span>業種: 不動産業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: すでにかなり動いている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 64.42</span>
+        <span class="badge">売買代金の目安: 1.8億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>422円</div>
+        <div><strong>直近10日騰落率</strong><br>4.20%</div>
+        <div><strong>直近10日最大上昇率</strong><br>8.40%</div>
+        <div><strong>20日最大下落率</strong><br>-7.18%</div>
+        <div><strong>急な下落の回数</strong><br>0.16</div>
+        <div><strong>日中の値動き幅</strong><br>2.47</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: すでにかなり動いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -7.18%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 8.40%</li><li>直近10日の着地: 4.20%</li><li>売買の厚み: 20日平均売買代金 1.8億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 427円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.47%</span><span>最大含み損 -2.11%</span><span>最新終値ベース -1.64%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>427円</td><td>418円</td><td>420円</td><td>0.00%</td><td>-2.11%</td><td>-1.64%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>429円</td><td>420円</td><td>424円</td><td>0.47%</td><td>-1.64%</td><td>-0.70%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>426円</td><td>419円</td><td>420円</td><td>-0.23%</td><td>-1.87%</td><td>-1.64%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">3位</div>
+      <h2>3679 じげん</h2>
+      <div class="meta">
+        <span>業種: 情報･通信業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: 少し動意づいている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 65.92</span>
+        <span class="badge">売買代金の目安: 1.6億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>413円</div>
+        <div><strong>直近10日騰落率</strong><br>0.98%</div>
+        <div><strong>直近10日最大上昇率</strong><br>4.16%</div>
+        <div><strong>20日最大下落率</strong><br>-4.93%</div>
+        <div><strong>急な下落の回数</strong><br>0.26</div>
+        <div><strong>日中の値動き幅</strong><br>1.87</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: 少し動意づいている</li><li>値動きは比較的落ち着いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -4.93%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 4.16%</li><li>直近10日の着地: 0.98%</li><li>売買の厚み: 20日平均売買代金 1.6億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 417円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 1.92%</span><span>最大含み損 -0.48%</span><span>最新終値ベース 0.96%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>422円</td><td>415円</td><td>419円</td><td>1.20%</td><td>-0.48%</td><td>0.48%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>425円</td><td>417円</td><td>419円</td><td>1.92%</td><td>0.00%</td><td>0.48%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>425円</td><td>420円</td><td>421円</td><td>1.92%</td><td>0.72%</td><td>0.96%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">4位</div>
+      <h2>7177 ＧＭＯフィナンシャルホールディングス</h2>
+      <div class="meta">
+        <span>業種: 証券･商品先物取引業</span>
+        <span>市場: スタンダード</span>
+        <span>直近10日: 少し動意づいている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 56.99</span>
+        <span class="badge">売買代金の目安: 2.0億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>943円</div>
+        <div><strong>直近10日騰落率</strong><br>5.96%</div>
+        <div><strong>直近10日最大上昇率</strong><br>6.63%</div>
+        <div><strong>20日最大下落率</strong><br>-5.12%</div>
+        <div><strong>急な下落の回数</strong><br>0.11</div>
+        <div><strong>日中の値動き幅</strong><br>1.66</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: 少し動意づいている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -5.12%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 6.63%</li><li>直近10日の着地: 5.96%</li><li>売買の厚み: 20日平均売買代金 2.0億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 954円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 6.39%</span><span>最大含み損 -0.52%</span><span>最新終値ベース 5.66%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>960円</td><td>949円</td><td>955円</td><td>0.63%</td><td>-0.52%</td><td>0.10%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>987円</td><td>958円</td><td>982円</td><td>3.46%</td><td>0.42%</td><td>2.94%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>1,015円</td><td>979円</td><td>1,008円</td><td>6.39%</td><td>2.62%</td><td>5.66%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">5位</div>
+      <h2>4293 セプテーニ・ホールディングス</h2>
+      <div class="meta">
+        <span>業種: サービス業</span>
+        <span>市場: スタンダード</span>
+        <span>直近10日: 少し動意づいている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 64.56</span>
+        <span class="badge">売買代金の目安: 1.8億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>433円</div>
+        <div><strong>直近10日騰落率</strong><br>4.09%</div>
+        <div><strong>直近10日最大上昇率</strong><br>4.09%</div>
+        <div><strong>20日最大下落率</strong><br>-5.46%</div>
+        <div><strong>急な下落の回数</strong><br>0.11</div>
+        <div><strong>日中の値動き幅</strong><br>2.17</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: 少し動意づいている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -5.46%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 4.09%</li><li>直近10日の着地: 4.09%</li><li>売買の厚み: 20日平均売買代金 1.8億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 436円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 1.38%</span><span>最大含み損 -1.15%</span><span>最新終値ベース 0.23%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>441円</td><td>431円</td><td>434円</td><td>1.15%</td><td>-1.15%</td><td>-0.46%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>441円</td><td>435円</td><td>438円</td><td>1.15%</td><td>-0.23%</td><td>0.46%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>442円</td><td>436円</td><td>437円</td><td>1.38%</td><td>0.00%</td><td>0.23%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">6位</div>
+      <h2>7238 曙ブレーキ工業</h2>
+      <div class="meta">
+        <span>業種: 輸送用機器</span>
+        <span>市場: プライム</span>
+        <span>直近10日: すでにかなり動いている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 61.59</span>
+        <span class="badge">売買代金の目安: 2.0億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>129円</div>
+        <div><strong>直近10日騰落率</strong><br>10.26%</div>
+        <div><strong>直近10日最大上昇率</strong><br>11.11%</div>
+        <div><strong>20日最大下落率</strong><br>-10.08%</div>
+        <div><strong>急な下落の回数</strong><br>0.26</div>
+        <div><strong>日中の値動き幅</strong><br>3.30</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: すでにかなり動いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -10.08%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 11.11%</li><li>直近10日の着地: 10.26%</li><li>売買の厚み: 20日平均売買代金 2.0億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 130円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 3.08%</span><span>最大含み損 -1.54%</span><span>最新終値ベース -0.77%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>134円</td><td>129円</td><td>131円</td><td>3.08%</td><td>-0.77%</td><td>0.77%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>133円</td><td>129円</td><td>129円</td><td>2.31%</td><td>-0.77%</td><td>-0.77%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>131円</td><td>128円</td><td>129円</td><td>0.77%</td><td>-1.54%</td><td>-0.77%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">7位</div>
+      <h2>6742 京三製作所</h2>
+      <div class="meta">
+        <span>業種: 電気機器</span>
+        <span>市場: プライム</span>
+        <span>直近10日: すでにかなり動いている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 66.03</span>
+        <span class="badge">売買代金の目安: 1.6億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>670円</div>
+        <div><strong>直近10日騰落率</strong><br>9.84%</div>
+        <div><strong>直近10日最大上昇率</strong><br>9.84%</div>
+        <div><strong>20日最大下落率</strong><br>-14.24%</div>
+        <div><strong>急な下落の回数</strong><br>0.21</div>
+        <div><strong>日中の値動き幅</strong><br>2.83</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: すでにかなり動いている</li><li>値動きは比較的落ち着いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -14.24%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 9.84%</li><li>直近10日の着地: 9.84%</li><li>売買の厚み: 20日平均売買代金 1.6億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 678円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 5.46%</span><span>最大含み損 -0.44%</span><span>最新終値ベース 3.39%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>689円</td><td>675円</td><td>679円</td><td>1.62%</td><td>-0.44%</td><td>0.15%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>695円</td><td>681円</td><td>694円</td><td>2.51%</td><td>0.44%</td><td>2.36%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>715円</td><td>698円</td><td>701円</td><td>5.46%</td><td>2.95%</td><td>3.39%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">8位</div>
+      <h2>6222 島精機製作所</h2>
+      <div class="meta">
+        <span>業種: 機械</span>
+        <span>市場: プライム</span>
+        <span>直近10日: すでにかなり動いている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 59.68</span>
+        <span class="badge">売買代金の目安: 1.9億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>974円</div>
+        <div><strong>直近10日騰落率</strong><br>9.32%</div>
+        <div><strong>直近10日最大上昇率</strong><br>10.10%</div>
+        <div><strong>20日最大下落率</strong><br>-10.62%</div>
+        <div><strong>急な下落の回数</strong><br>0.16</div>
+        <div><strong>日中の値動き幅</strong><br>2.63</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: すでにかなり動いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -10.62%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 10.10%</li><li>直近10日の着地: 9.32%</li><li>売買の厚み: 20日平均売買代金 1.9億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-15 の始値 985円 を基準に、3営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.71%</span><span>最大含み損 -2.74%</span><span>最新終値ベース -2.54%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-15</td><td>992円</td><td>970円</td><td>982円</td><td>0.71%</td><td>-1.52%</td><td>-0.30%</td></tr><tr><td>2日目</td><td>2026-04-16</td><td>989円</td><td>970円</td><td>970円</td><td>0.41%</td><td>-1.52%</td><td>-1.52%</td></tr><tr><td>3日目</td><td>2026-04-17</td><td>981円</td><td>958円</td><td>960円</td><td>-0.41%</td><td>-2.74%</td><td>-2.54%</td></tr></tbody></table></div></details>
+    </section>
+            
+  </div>
+</body>
+</html>

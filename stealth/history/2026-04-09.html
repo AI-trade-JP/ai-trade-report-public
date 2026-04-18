@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026年4月9日 ステルス仕込み候補</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background: radial-gradient(circle at top left, #f8fbff 0%, #f4f6fb 38%, #eef2f9 100%);
+      color: #222;
+      line-height: 1.45;
+    }
+    .wrap { max-width: 940px; margin: 0 auto; padding: 20px 16px 24px; }
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fbff 50%, #eef4ff 100%);
+      border: 1px solid #e6edf8;
+      border-radius: 22px;
+      padding: 22px 18px 18px;
+      margin-bottom: 18px;
+      box-shadow: 0 10px 28px rgba(27, 45, 94, 0.06);
+    }
+    .hero-date { font-size: 30px; font-weight: 800; color: #2f3a46; margin-bottom: 6px; }
+    .hero-title { font-size: 30px; font-weight: 800; color: #1f2937; margin: 0 0 14px 18px; }
+    .lead { color: #51606f; margin: 0 0 8px; font-size: 14px; }
+    .sublead { color: #7a8591; margin: 0; font-size: 12px; }
+    .history-top { text-align: right; font-size: 12px; color: #7a8591; margin-top: 12px; line-height: 1.7; }
+    .history-top a { color: #6c7683; text-decoration: none; margin-left: 6px; }
+    .history-label { color: #66707b; margin-right: 6px; }
+    .nav-links { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav-links a {
+      background: linear-gradient(180deg, #edf2ff 0%, #e7edff 100%);
+      color: #334;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      border: 1px solid #dce4ff;
+      text-decoration: none;
+    }
+    .note {
+      background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px;
+      font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6;
+    }
+    .card {
+      background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.045); border: 1px solid rgba(230, 235, 245, 0.9);
+    }
+    .rank { font-size: 13px; color: #777; margin-bottom: 4px; }
+    h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.2; word-break: break-word; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #666; margin-bottom: 6px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .badge {
+      background: linear-gradient(180deg, #edf2ff 0%, #e7edff 100%);
+      color: #334; padding: 6px 10px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff;
+    }
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px 10px; margin-bottom: 12px; }
+    .price-grid > div { min-height: 56px; font-size: 15px; }
+    .price-grid strong { font-size: 14px; }
+    .columns { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .columns h3 { margin: 0 0 6px; font-size: 18px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .tracking-details {
+      margin-top: 14px;
+      border-top: 1px solid #e7ebf3;
+      padding-top: 12px;
+    }
+    .tracking-details summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: #334b74;
+      margin-bottom: 10px;
+    }
+    .tracking-note {
+      margin: 10px 0 8px;
+      color: #566272;
+      font-size: 13px;
+    }
+    .tracking-summary {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .tracking-summary span {
+      background: #f4f7fc;
+      border: 1px solid #e2e8f3;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      color: #445266;
+    }
+    .tracking-table-wrap {
+      overflow-x: auto;
+    }
+    .tracking-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .tracking-table th, .tracking-table td {
+      border-bottom: 1px solid #edf1f7;
+      padding: 8px 6px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    .tracking-table th:nth-child(1),
+    .tracking-table th:nth-child(2),
+    .tracking-table td:nth-child(1),
+    .tracking-table td:nth-child(2) {
+      text-align: left;
+    }
+    .tracking-empty {
+      margin-top: 12px;
+      color: #7b8693;
+      font-size: 13px;
+    }
+    @media (min-width: 760px) { .columns { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-date">2026年4月9日</div>
+      <div class="hero-title">ステルス仕込み候補</div>
+      <p class="lead">毎日19:30ごろ更新。日本株の引け後データをもとに、静かな仕込みや初動入口を探すための候補一覧です。</p>
+      <p class="sublead">分析基準日: 2026-04-08</p>
+      <div class="nav-links">
+        <a href="../">押し目候補ページへ</a>
+        <a href="history/">過去の分析一覧へ</a>
+      </div>
+      <div class="history-top">
+        <span class="history-label">保存件数:</span>3件
+      </div>
+    </section>
+    <div class="note">
+      このページは、まだ大きくは上がっていない銘柄や、上がり始めの入口に見える銘柄を毎日ピックアップする一覧です。
+      テーマや信用残などの外部データはまだ未接続なので、主に価格・出来高・値動きの形から候補を出しています。
+    </div>
+    
+    <section class="card">
+      <div class="rank">1位</div>
+      <h2>2982 ＡＤワークスグループ</h2>
+      <div class="meta">
+        <span>業種: 不動産業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 64.59</span>
+        <span class="badge">売買代金の目安: 1.9億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>439円</div>
+        <div><strong>直近10日騰落率</strong><br>2.09%</div>
+        <div><strong>直近10日最大上昇率</strong><br>2.09%</div>
+        <div><strong>20日最大下落率</strong><br>-8.45%</div>
+        <div><strong>急な下落の回数</strong><br>0.26</div>
+        <div><strong>日中の値動き幅</strong><br>2.56</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -8.45%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 2.09%</li><li>直近10日の着地: 2.09%</li><li>売買の厚み: 20日平均売買代金 1.9億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 438円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.23%</span><span>最大含み損 -4.57%</span><span>最新終値ベース -4.11%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>439円</td><td>426円</td><td>429円</td><td>0.23%</td><td>-2.74%</td><td>-2.05%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>433円</td><td>422円</td><td>422円</td><td>-1.14%</td><td>-3.65%</td><td>-3.65%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>425円</td><td>420円</td><td>423円</td><td>-2.97%</td><td>-4.11%</td><td>-3.42%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>427円</td><td>418円</td><td>422円</td><td>-2.51%</td><td>-4.57%</td><td>-3.65%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>427円</td><td>418円</td><td>420円</td><td>-2.51%</td><td>-4.57%</td><td>-4.11%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>429円</td><td>420円</td><td>424円</td><td>-2.05%</td><td>-4.11%</td><td>-3.20%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>426円</td><td>419円</td><td>420円</td><td>-2.74%</td><td>-4.34%</td><td>-4.11%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">2位</div>
+      <h2>2471 エスプール</h2>
+      <div class="meta">
+        <span>業種: サービス業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: 少し動意づいている</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 68.27</span>
+        <span class="badge">売買代金の目安: 1.7億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>267円</div>
+        <div><strong>直近10日騰落率</strong><br>6.80%</div>
+        <div><strong>直近10日最大上昇率</strong><br>6.80%</div>
+        <div><strong>20日最大下落率</strong><br>-4.69%</div>
+        <div><strong>急な下落の回数</strong><br>0.26</div>
+        <div><strong>日中の値動き幅</strong><br>2.36</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: 少し動意づいている</li><li>値動きは比較的落ち着いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -4.69%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 6.80%</li><li>直近10日の着地: 6.80%</li><li>売買の厚み: 20日平均売買代金 1.7億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 265円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 1.51%</span><span>最大含み損 -5.28%</span><span>最新終値ベース -4.15%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>268円</td><td>260円</td><td>264円</td><td>1.13%</td><td>-1.89%</td><td>-0.38%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>267円</td><td>261円</td><td>262円</td><td>0.75%</td><td>-1.51%</td><td>-1.13%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>261円</td><td>256円</td><td>258円</td><td>-1.51%</td><td>-3.40%</td><td>-2.64%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>262円</td><td>257円</td><td>258円</td><td>-1.13%</td><td>-3.02%</td><td>-2.64%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>269円</td><td>252円</td><td>257円</td><td>1.51%</td><td>-4.91%</td><td>-3.02%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>261円</td><td>253円</td><td>256円</td><td>-1.51%</td><td>-4.53%</td><td>-3.40%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>257円</td><td>251円</td><td>254円</td><td>-3.02%</td><td>-5.28%</td><td>-4.15%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">3位</div>
+      <h2>3632 グリーホールディングス</h2>
+      <div class="meta">
+        <span>業種: 情報･通信業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 64.46</span>
+        <span class="badge">売買代金の目安: 1.9億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>390円</div>
+        <div><strong>直近10日騰落率</strong><br>3.45%</div>
+        <div><strong>直近10日最大上昇率</strong><br>3.45%</div>
+        <div><strong>20日最大下落率</strong><br>-7.14%</div>
+        <div><strong>急な下落の回数</strong><br>0.16</div>
+        <div><strong>日中の値動き幅</strong><br>1.76</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -7.14%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 3.45%</li><li>直近10日の着地: 3.45%</li><li>売買の厚み: 20日平均売買代金 1.9億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 390円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.00%</span><span>最大含み損 -4.36%</span><span>最新終値ベース -0.77%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>390円</td><td>380円</td><td>380円</td><td>0.00%</td><td>-2.56%</td><td>-2.56%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>381円</td><td>374円</td><td>376円</td><td>-2.31%</td><td>-4.10%</td><td>-3.59%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>376円</td><td>373円</td><td>375円</td><td>-3.59%</td><td>-4.36%</td><td>-3.85%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>380円</td><td>376円</td><td>377円</td><td>-2.56%</td><td>-3.59%</td><td>-3.33%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>384円</td><td>380円</td><td>382円</td><td>-1.54%</td><td>-2.56%</td><td>-2.05%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>389円</td><td>384円</td><td>387円</td><td>-0.26%</td><td>-1.54%</td><td>-0.77%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>390円</td><td>386円</td><td>387円</td><td>0.00%</td><td>-1.03%</td><td>-0.77%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">4位</div>
+      <h2>7593 ＶＴホールディングス</h2>
+      <div class="meta">
+        <span>業種: 小売業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 60.83</span>
+        <span class="badge">売買代金の目安: 1.7億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>506円</div>
+        <div><strong>直近10日騰落率</strong><br>-0.98%</div>
+        <div><strong>直近10日最大上昇率</strong><br>0.20%</div>
+        <div><strong>20日最大下落率</strong><br>-9.31%</div>
+        <div><strong>急な下落の回数</strong><br>0.11</div>
+        <div><strong>日中の値動き幅</strong><br>1.52</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -9.31%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 0.20%</li><li>直近10日の着地: -0.98%</li><li>売買の厚み: 20日平均売買代金 1.7億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 509円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.20%</span><span>最大含み損 -3.54%</span><span>最新終値ベース -3.34%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>510円</td><td>502円</td><td>502円</td><td>0.20%</td><td>-1.38%</td><td>-1.38%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>505円</td><td>497円</td><td>499円</td><td>-0.79%</td><td>-2.36%</td><td>-1.96%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>499円</td><td>492円</td><td>495円</td><td>-1.96%</td><td>-3.34%</td><td>-2.75%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>498円</td><td>491円</td><td>493円</td><td>-2.16%</td><td>-3.54%</td><td>-3.14%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>498円</td><td>493円</td><td>495円</td><td>-2.16%</td><td>-3.14%</td><td>-2.75%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>498円</td><td>492円</td><td>495円</td><td>-2.16%</td><td>-3.34%</td><td>-2.75%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>496円</td><td>491円</td><td>492円</td><td>-2.55%</td><td>-3.54%</td><td>-3.34%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">5位</div>
+      <h2>3679 じげん</h2>
+      <div class="meta">
+        <span>業種: 情報･通信業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 65.09</span>
+        <span class="badge">売買代金の目安: 1.7億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>426円</div>
+        <div><strong>直近10日騰落率</strong><br>1.91%</div>
+        <div><strong>直近10日最大上昇率</strong><br>2.15%</div>
+        <div><strong>20日最大下落率</strong><br>-6.90%</div>
+        <div><strong>急な下落の回数</strong><br>0.26</div>
+        <div><strong>日中の値動き幅</strong><br>1.83</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li><li>値動きは比較的落ち着いている</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -6.90%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 2.15%</li><li>直近10日の着地: 1.91%</li><li>売買の厚み: 20日平均売買代金 1.7億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 426円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.47%</span><span>最大含み損 -5.40%</span><span>最新終値ベース -1.17%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>428円</td><td>421円</td><td>422円</td><td>0.47%</td><td>-1.17%</td><td>-0.94%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>423円</td><td>409円</td><td>410円</td><td>-0.70%</td><td>-3.99%</td><td>-3.76%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>410円</td><td>403円</td><td>409円</td><td>-3.76%</td><td>-5.40%</td><td>-3.99%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>415円</td><td>410円</td><td>413円</td><td>-2.58%</td><td>-3.76%</td><td>-3.05%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>422円</td><td>415円</td><td>419円</td><td>-0.94%</td><td>-2.58%</td><td>-1.64%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>425円</td><td>417円</td><td>419円</td><td>-0.23%</td><td>-2.11%</td><td>-1.64%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>425円</td><td>420円</td><td>421円</td><td>-0.23%</td><td>-1.41%</td><td>-1.17%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">6位</div>
+      <h2>1887 日本国土開発</h2>
+      <div class="meta">
+        <span>業種: 建設業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 59.45</span>
+        <span class="badge">売買代金の目安: 2.0億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>615円</div>
+        <div><strong>直近10日騰落率</strong><br>2.84%</div>
+        <div><strong>直近10日最大上昇率</strong><br>2.84%</div>
+        <div><strong>20日最大下落率</strong><br>-10.17%</div>
+        <div><strong>急な下落の回数</strong><br>0.32</div>
+        <div><strong>日中の値動き幅</strong><br>2.11</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -10.17%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 2.84%</li><li>直近10日の着地: 2.84%</li><li>売買の厚み: 20日平均売買代金 2.0億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 614円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 2.61%</span><span>最大含み損 -4.23%</span><span>最新終値ベース -1.47%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>618円</td><td>604円</td><td>605円</td><td>0.65%</td><td>-1.63%</td><td>-1.47%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>614円</td><td>603円</td><td>608円</td><td>0.00%</td><td>-1.79%</td><td>-0.98%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>611円</td><td>593円</td><td>595円</td><td>-0.49%</td><td>-3.42%</td><td>-3.09%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>630円</td><td>588円</td><td>610円</td><td>2.61%</td><td>-4.23%</td><td>-0.65%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>620円</td><td>602円</td><td>616円</td><td>0.98%</td><td>-1.95%</td><td>0.33%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>624円</td><td>613円</td><td>613円</td><td>1.63%</td><td>-0.16%</td><td>-0.16%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>616円</td><td>605円</td><td>605円</td><td>0.33%</td><td>-1.47%</td><td>-1.47%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">7位</div>
+      <h2>9534 北海道瓦斯</h2>
+      <div class="meta">
+        <span>業種: 電気･ガス業</span>
+        <span>市場: プライム</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 56.94</span>
+        <span class="badge">売買代金の目安: 1.9億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>902円</div>
+        <div><strong>直近10日騰落率</strong><br>0.78%</div>
+        <div><strong>直近10日最大上昇率</strong><br>0.78%</div>
+        <div><strong>20日最大下落率</strong><br>-6.89%</div>
+        <div><strong>急な下落の回数</strong><br>0.32</div>
+        <div><strong>日中の値動き幅</strong><br>2.38</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -6.89%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 0.78%</li><li>直近10日の着地: 0.78%</li><li>売買の厚み: 20日平均売買代金 1.9億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 900円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 2.67%</span><span>最大含み損 -2.78%</span><span>最新終値ベース 0.67%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>909円</td><td>886円</td><td>886円</td><td>1.00%</td><td>-1.56%</td><td>-1.56%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>903円</td><td>875円</td><td>875円</td><td>0.33%</td><td>-2.78%</td><td>-2.78%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>908円</td><td>884円</td><td>895円</td><td>0.89%</td><td>-1.78%</td><td>-0.56%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>908円</td><td>891円</td><td>905円</td><td>0.89%</td><td>-1.00%</td><td>0.56%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>924円</td><td>893円</td><td>900円</td><td>2.67%</td><td>-0.78%</td><td>0.00%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>920円</td><td>901円</td><td>915円</td><td>2.22%</td><td>0.11%</td><td>1.67%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>920円</td><td>901円</td><td>906円</td><td>2.22%</td><td>0.11%</td><td>0.67%</td></tr></tbody></table></div></details>
+    </section>
+            
+    <section class="card">
+      <div class="rank">8位</div>
+      <h2>1822 大豊建設</h2>
+      <div class="meta">
+        <span>業種: 建設業</span>
+        <span>市場: スタンダード</span>
+        <span>直近10日: まだ大きくは跳ねていない</span>
+      </div>
+      <div class="badges">
+        <span class="badge">値動きの安定感: 62.30</span>
+        <span class="badge">売買代金の目安: 1.8億円</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>780円</div>
+        <div><strong>直近10日騰落率</strong><br>-4.76%</div>
+        <div><strong>直近10日最大上昇率</strong><br>0.00%</div>
+        <div><strong>20日最大下落率</strong><br>-10.18%</div>
+        <div><strong>急な下落の回数</strong><br>0.11</div>
+        <div><strong>日中の値動き幅</strong><br>1.68</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>見方</h3>
+          <ul><li>直近10営業日の状態: まだ大きくは跳ねていない</li></ul>
+        </div>
+        <div>
+          <h3>観察ポイント</h3>
+          <ul><li>上昇前に深く掘るか: 20日最大下落 -10.18%</li><li>すでにどれだけ上がっているか: 直近10日最大上昇 0.00%</li><li>直近10日の着地: -4.76%</li><li>売買の厚み: 20日平均売買代金 1.8億円</li></ul>
+        </div>
+      </div>
+      <details class='tracking-details'><summary>その後10営業日の推移を見る</summary><p class='tracking-note'>2026-04-09 の始値 781円 を基準に、7営業日分の推移を表示しています。</p><div class='tracking-summary'><span>最大含み益 0.51%</span><span>最大含み損 -5.25%</span><span>最新終値ベース -4.23%</span></div><div class='tracking-table-wrap'><table class='tracking-table'><thead><tr><th>日数</th><th>日付</th><th>高値</th><th>安値</th><th>終値</th><th>高値時点</th><th>安値時点</th><th>終値時点</th></tr></thead><tbody><tr><td>1日目</td><td>2026-04-09</td><td>785円</td><td>773円</td><td>773円</td><td>0.51%</td><td>-1.02%</td><td>-1.02%</td></tr><tr><td>2日目</td><td>2026-04-10</td><td>776円</td><td>760円</td><td>763円</td><td>-0.64%</td><td>-2.69%</td><td>-2.30%</td></tr><tr><td>3日目</td><td>2026-04-13</td><td>767円</td><td>752円</td><td>758円</td><td>-1.79%</td><td>-3.71%</td><td>-2.94%</td></tr><tr><td>4日目</td><td>2026-04-14</td><td>764円</td><td>755円</td><td>760円</td><td>-2.18%</td><td>-3.33%</td><td>-2.69%</td></tr><tr><td>5日目</td><td>2026-04-15</td><td>763円</td><td>751円</td><td>752円</td><td>-2.30%</td><td>-3.84%</td><td>-3.71%</td></tr><tr><td>6日目</td><td>2026-04-16</td><td>755円</td><td>748円</td><td>749円</td><td>-3.33%</td><td>-4.23%</td><td>-4.10%</td></tr><tr><td>7日目</td><td>2026-04-17</td><td>749円</td><td>740円</td><td>748円</td><td>-4.10%</td><td>-5.25%</td><td>-4.23%</td></tr></tbody></table></div></details>
+    </section>
+            
+  </div>
+</body>
+</html>
