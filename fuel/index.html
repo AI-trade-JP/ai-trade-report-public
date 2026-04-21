@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026年4月22日 需給燃料候補</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; background: radial-gradient(circle at top left, #fff9f0 0%, #f8fbff 45%, #eef3fb 100%); color: #222; line-height: 1.45; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 20px 16px 24px; }
+    .hero { background: linear-gradient(135deg, #ffffff 0%, #fff8ef 50%, #eef4ff 100%); border: 1px solid #e6edf8; border-radius: 22px; padding: 22px 18px; margin-bottom: 18px; box-shadow: 0 10px 28px rgba(27,45,94,.06); }
+    .hero-date { font-size: 30px; font-weight: 800; color: #2f3a46; margin-bottom: 6px; }
+    .hero-title { font-size: 30px; font-weight: 800; color: #1f2937; margin: 0 0 14px 0; }
+    .lead { color: #51606f; margin: 0 0 8px; font-size: 14px; }
+    .sublead { color: #7a8591; margin: 0; font-size: 12px; }
+    .nav-links { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .nav-links a { background: #edf2ff; color: #334; padding: 8px 12px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff; text-decoration: none; }
+    .history-top { text-align: right; font-size: 12px; color: #7a8591; margin-top: 12px; }
+    .note { background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px; font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6; }
+    .summary-box { background: #fff7e8; border-radius: 16px; padding: 14px; margin-bottom: 18px; border: 1px solid #f4e4bd; }
+    .summary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .tier-summary { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 18px; }
+    .tier-box { border-radius: 18px; padding: 16px; border: 2px solid #e6edf8; background: #fff; }
+    .tier-box.tier1 { border-color: #d92d20; background: #fff4f2; }
+    .tier-box.tier2 { border-color: #c89b2b; background: #fff8e7; }
+    .tier-box.tier3 { border-color: #98a2b3; background: #f6f7f9; }
+    .tier-box-head { font-size: 12px; font-weight: 700; color: #667085; margin-bottom: 4px; }
+    .tier-box-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
+    .tier-box-stat { font-size: 13px; color: #475467; margin-bottom: 4px; }
+    .tier-box-note { font-size: 13px; color: #344054; margin-top: 8px; }
+    .tier-box-count { margin-top: 10px; font-size: 13px; font-weight: 700; color: #1d2939; }
+    .card { background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px; box-shadow: 0 8px 22px rgba(0,0,0,.045); border: 2px solid rgba(230,235,245,.9); }
+    .card.tier1-plus, .card.tier1 { border-color: #d92d20; background: linear-gradient(180deg, #fffefe 0%, #fff4f2 100%); }
+    .card.tier2 { border-color: #c89b2b; background: linear-gradient(180deg, #fffef8 0%, #fff8e7 100%); }
+    .card.tier3 { border-color: #98a2b3; background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%); }
+    .rank { font-size: 13px; color: #777; margin-bottom: 4px; }
+    .tier-chip { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #eef2ff; color: #344054; font-weight: 700; }
+    .card.tier1-plus .tier-chip, .card.tier1 .tier-chip { background: #fee4e2; color: #b42318; }
+    .card.tier2 .tier-chip { background: #fef0c7; color: #b54708; }
+    .card.tier3 .tier-chip { background: #eaecf0; color: #475467; }
+    h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.2; word-break: break-word; }
+    .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #666; margin-bottom: 6px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .badge { background: #edf2ff; color: #334; padding: 6px 10px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff; }
+    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
+    .columns { display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .columns h3 { margin: 0 0 6px; font-size: 18px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .observation { margin-top: 10px; font-size: 13px; color: #51606f; }
+    @media (min-width: 760px) { .summary-grid { grid-template-columns: repeat(4, 1fr); } .columns { grid-template-columns: repeat(2, 1fr); } .tier-summary { grid-template-columns: repeat(3, 1fr); } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-date">2026年4月22日</div>
+      <div class="hero-title">需給燃料候補</div>
+      <p class="lead">毎日19:30ごろ更新。JPX空売り、日証金、動意後の押しをもとに、短期で仕掛けやすい候補を拾うページです。</p>
+      <p class="sublead">分析基準日: 2026-04-21</p>
+      <div class="nav-links">
+        <a href="/ai-trade-report-public/">押し目候補ページへ</a>
+        <a href="/ai-trade-report-public/stealth/">ステルス候補ページへ</a>
+        <a href="/ai-trade-report-public/fuel/history/">過去の分析一覧へ</a>
+      </div>
+      <div class="history-top"><span>保存件数:</span> 1件</div>
+    </section>
+    <div class="note">本命は Tier1 の `E_v3` と `G_core` です。運用ルールは `+10%利確 / -8%損切り / 5営業日ルール` を前提にしています。Tier1 は出たら基本的に買う前提、Tier2 は余力で拾う、Tier3 は補助です。</div>
+    <div class="summary-box">
+      <div class="summary-grid">
+        <div><strong>候補数</strong><br>25件</div>
+        <div><strong>Tier1+</strong><br>1件</div>
+        <div><strong>Tier1</strong><br>14件</div>
+        <div><strong>Tier2/3</strong><br>10件</div>
+      </div>
+    </div>
+    <section class="tier-summary">
+      
+        <div class="tier-box tier1">
+          <div class="tier-box-head">Tier1</div>
+          <div class="tier-box-title">本命。E_v3 / G_core</div>
+          <div class="tier-box-stat">TP率 41.8-48.5% / 平均実現 +1.63〜+2.48%</div>
+          <div class="tier-box-stat">出現目安: 月10件前後</div>
+          <div class="tier-box-note">出たら基本的に買う前提。資金の20-25%目安。</div>
+          <div class="tier-box-count">本日 14件</div>
+        </div>
+            
+        <div class="tier-box tier2">
+          <div class="tier-box-head">Tier2</div>
+          <div class="tier-box-title">実用枠。G_wide</div>
+          <div class="tier-box-stat">TP率 41.62% / 平均実現 +1.55%</div>
+          <div class="tier-box-stat">出現目安: 月12-18件</div>
+          <div class="tier-box-note">Tier1が少ない日に余力で拾う。資金の10-15%目安。</div>
+          <div class="tier-box-count">本日 6件</div>
+        </div>
+            
+        <div class="tier-box tier3">
+          <div class="tier-box-head">Tier3</div>
+          <div class="tier-box-title">補助枠。F_main / B_v3</div>
+          <div class="tier-box-stat">TP率 35.4-40.3% / 平均実現 +0.99〜+1.08%</div>
+          <div class="tier-box-stat">出現目安: 月10件超</div>
+          <div class="tier-box-note">本命不足時の補助。資金の5-10%目安。</div>
+          <div class="tier-box-count">本日 4件</div>
+        </div>
+            
+    </section>
+    
+    <section class="card tier1-plus">
+      <div class="rank"><span class="tier-chip">1位 / Tier1+</span></div>
+      <h2>60720 地盤ネットホールディングス</h2>
+      <div class="meta">
+        <span>市場: スタンダード</span>
+        <span>業種: サービス業</span>
+        <span>通過戦略: E_v3, B_v3</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の30%</span>
+        <span class="badge">JPX空売り: 11.22%</span>
+        <span class="badge">空売り変化: 0.58%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>1,154円</div>
+        <div><strong>利確目安</strong><br>1,269円</div>
+        <div><strong>損切り目安</strong><br>1,062円</div>
+        <div><strong>動意からの日数</strong><br>17日</div>
+        <div><strong>押し幅</strong><br>-34.19%</div>
+        <div><strong>出来高</strong><br>0.88% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>E_v3: JPX空売り 11.22% / 空売り増加 +0.006 / 動意から17日</li><li>B_v3: 押し -34.2% / 動意から17日 / 出来高 0.88x</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>E通過かつJPX空売り8%以上。厳選エリート。</li><li>5日高値 1250 を上抜くと再上昇確認。3日安値 1043 割れは短期崩れの目安。 20日線 980.75 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">2位 / Tier1</span></div>
+      <h2>66130 ＱＤレーザ</h2>
+      <div class="meta">
+        <span>市場: グロース</span>
+        <span>業種: 電気機器</span>
+        <span>通過戦略: G_core, G_wide, F_main</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 8.88%</span>
+        <span class="badge">空売り変化: -0.19%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>1,609円</div>
+        <div><strong>利確目安</strong><br>1,770円</div>
+        <div><strong>損切り目安</strong><br>1,480円</div>
+        <div><strong>動意からの日数</strong><br>5日</div>
+        <div><strong>押し幅</strong><br>-14.48%</div>
+        <div><strong>出来高</strong><br>1.43% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 8.88% / 空売り横ばい -0.0019 / 動意から5日</li><li>G_wide: JPX空売り 8.88% / 空売り横ばい -0.0019 / 押し -14.5%</li><li>F_main: JPX空売り 8.88% / 押し -14.5% / 動意から5日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>当日高値 1877 を上抜くと再上昇確認。3日安値 1270 割れは短期崩れの目安。 20日線 1237.6 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">3位 / Tier1</span></div>
+      <h2>57260 大阪チタニウムテクノロジーズ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 非鉄金属</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 8.88%</span>
+        <span class="badge">空売り変化: 0.31%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>2,752円</div>
+        <div><strong>利確目安</strong><br>3,027円</div>
+        <div><strong>損切り目安</strong><br>2,532円</div>
+        <div><strong>動意からの日数</strong><br>37日</div>
+        <div><strong>押し幅</strong><br>-35.36%</div>
+        <div><strong>出来高</strong><br>0.76% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 8.88% / 空売り横ばい +0.0031 / 動意から37日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 2960 を上抜くと再上昇確認。3日安値 2603 割れは短期崩れの目安。 20日線 2728.15 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">4位 / Tier1</span></div>
+      <h2>39940 マネーフォワード</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 情報･通信業</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 8.79%</span>
+        <span class="badge">空売り変化: 0.13%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>5,751円</div>
+        <div><strong>利確目安</strong><br>6,326円</div>
+        <div><strong>損切り目安</strong><br>5,291円</div>
+        <div><strong>動意からの日数</strong><br>4日</div>
+        <div><strong>押し幅</strong><br>1.97%</div>
+        <div><strong>出来高</strong><br>1.64% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 8.79% / 空売り横ばい +0.0013 / 動意から4日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 5782 を上抜くと再上昇確認。3日安値 4912 割れは短期崩れの目安。 20日線 4028.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">実体陽線で引けており、買いが優勢です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">5位 / Tier1</span></div>
+      <h2>31030 ユニチカ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 繊維製品</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 7.81%</span>
+        <span class="badge">空売り変化: -0.24%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>3,045円</div>
+        <div><strong>利確目安</strong><br>3,350円</div>
+        <div><strong>損切り目安</strong><br>2,801円</div>
+        <div><strong>動意からの日数</strong><br>2日</div>
+        <div><strong>押し幅</strong><br>-1.30%</div>
+        <div><strong>出来高</strong><br>1.82% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 7.81% / 空売り横ばい -0.0024 / 動意から2日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 4380 を上抜くと再上昇確認。3日安値 2656 割れは短期崩れの目安。 20日線 1699.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">陰線引けで、まだ戻り売りの圧力が残っています。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">6位 / Tier1</span></div>
+      <h2>36560 ＫＬａｂ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 情報･通信業</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 7.46%</span>
+        <span class="badge">空売り変化: 0.07%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>309円</div>
+        <div><strong>利確目安</strong><br>340円</div>
+        <div><strong>損切り目安</strong><br>284円</div>
+        <div><strong>動意からの日数</strong><br>4日</div>
+        <div><strong>押し幅</strong><br>-15.86%</div>
+        <div><strong>出来高</strong><br>2.18% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 7.46% / 空売り横ばい +0.0007 / 動意から4日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 389 を上抜くと再上昇確認。当日安値 297 割れは短期崩れの目安。 20日線 324.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">7位 / Tier1</span></div>
+      <h2>95190 レノバ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 電気･ガス業</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 5.19%</span>
+        <span class="badge">空売り変化: -0.11%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>980円</div>
+        <div><strong>利確目安</strong><br>1,078円</div>
+        <div><strong>損切り目安</strong><br>902円</div>
+        <div><strong>動意からの日数</strong><br>16日</div>
+        <div><strong>押し幅</strong><br>-6.68%</div>
+        <div><strong>出来高</strong><br>1.06% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 5.19% / 空売り横ばい -0.0011 / 動意から16日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 1120 を上抜くと再上昇確認。当日安値 977 割れは短期崩れの目安。 20日線 931.95 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">陰線引けで、まだ戻り売りの圧力が残っています。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">8位 / Tier1</span></div>
+      <h2>36970 ＳＨＩＦＴ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 情報･通信業</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 5.16%</span>
+        <span class="badge">空売り変化: 0.01%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>676.70円</div>
+        <div><strong>利確目安</strong><br>744円</div>
+        <div><strong>損切り目安</strong><br>623円</div>
+        <div><strong>動意からの日数</strong><br>2日</div>
+        <div><strong>押し幅</strong><br>-11.81%</div>
+        <div><strong>出来高</strong><br>1.99% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 5.16% / 空売り横ばい +0.0001 / 動意から2日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 755.9 を上抜くと再上昇確認。当日安値 666.6 割れは短期崩れの目安。 20日線 661.38 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">陰線引けで、まだ戻り売りの圧力が残っています。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">9位 / Tier1</span></div>
+      <h2>78590 アルメディオ</h2>
+      <div class="meta">
+        <span>市場: スタンダード</span>
+        <span>業種: その他製品</span>
+        <span>通過戦略: G_core, G_wide, F_main, B_v3</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 6.26%</span>
+        <span class="badge">空売り変化: 0.20%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>355円</div>
+        <div><strong>利確目安</strong><br>391円</div>
+        <div><strong>損切り目安</strong><br>327円</div>
+        <div><strong>動意からの日数</strong><br>15日</div>
+        <div><strong>押し幅</strong><br>-20.62%</div>
+        <div><strong>出来高</strong><br>0.86% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 6.26% / 空売り横ばい +0.0020 / 動意から15日</li><li>G_wide: JPX空売り 6.26% / 空売り横ばい +0.0020 / 押し -20.6%</li><li>F_main: JPX空売り 6.26% / 押し -20.6% / 動意から15日</li><li>B_v3: 押し -20.6% / 動意から15日 / 出来高 0.86x</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>5日高値 358 を上抜くと再上昇確認。3日安値 299 割れは短期崩れの目安。 20日線 281.4 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">実体陽線で引けており、買いが優勢です。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">10位 / Tier1</span></div>
+      <h2>59850 サンコール</h2>
+      <div class="meta">
+        <span>市場: スタンダード</span>
+        <span>業種: 金属製品</span>
+        <span>通過戦略: G_core</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 5.68%</span>
+        <span class="badge">空売り変化: 0.14%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>1,592円</div>
+        <div><strong>利確目安</strong><br>1,751円</div>
+        <div><strong>損切り目安</strong><br>1,465円</div>
+        <div><strong>動意からの日数</strong><br>28日</div>
+        <div><strong>押し幅</strong><br>-41.14%</div>
+        <div><strong>出来高</strong><br>1.57% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 5.68% / 空売り横ばい +0.0014 / 動意から28日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 1846 を上抜くと再上昇確認。当日安値 1575 割れは短期崩れの目安。 20日線 1515.55 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">陰線引けで、まだ戻り売りの圧力が残っています。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">11位 / Tier1</span></div>
+      <h2>26670 イメージ　ワン</h2>
+      <div class="meta">
+        <span>市場: スタンダード</span>
+        <span>業種: 卸売業</span>
+        <span>通過戦略: G_core, G_wide, F_main</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 6.60%</span>
+        <span class="badge">空売り変化: 0.15%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>234円</div>
+        <div><strong>利確目安</strong><br>257円</div>
+        <div><strong>損切り目安</strong><br>215円</div>
+        <div><strong>動意からの日数</strong><br>6日</div>
+        <div><strong>押し幅</strong><br>-10.47%</div>
+        <div><strong>出来高</strong><br>1.15% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>G_core: JPX空売り 6.60% / 空売り横ばい +0.0015 / 動意から6日</li><li>G_wide: JPX空売り 6.60% / 空売り横ばい +0.0015 / 押し -10.5%</li><li>F_main: JPX空売り 6.60% / 押し -10.5% / 動意から6日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>5日高値 269 を上抜くと再上昇確認。当日安値 231 割れは短期崩れの目安。 20日線 233.55 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">陰線引けで、まだ戻り売りの圧力が残っています。</div>
+    </section>
+            
+    <section class="card tier1">
+      <div class="rank"><span class="tier-chip">12位 / Tier1</span></div>
+      <h2>64900 ＰＩＬＬＡＲ</h2>
+      <div class="meta">
+        <span>市場: プライム</span>
+        <span>業種: 機械</span>
+        <span>通過戦略: E_v3</span>
+      </div>
+      <div class="badges">
+        <span class="badge">推奨配分: 資金の20-25%</span>
+        <span class="badge">JPX空売り: 5.53%</span>
+        <span class="badge">空売り変化: 0.64%</span>
+      </div>
+      <div class="price-grid">
+        <div><strong>終値</strong><br>8,830円</div>
+        <div><strong>利確目安</strong><br>9,713円</div>
+        <div><strong>損切り目安</strong><br>8,124円</div>
+        <div><strong>動意からの日数</strong><br>6日</div>
+        <div><strong>押し幅</strong><br>-7.82%</div>
+        <div><strong>出来高</strong><br>1.41% x ADV20</div>
+      </div>
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>E_v3: JPX空売り 5.53% / 空売り増加 +0.006 / 動意から6日</li></ul>
+        </div>
+        <div>
+          <h3>使い方</h3>
+          <ul><li>Claude本命戦略を通過。</li><li>5日高値 9540 を上抜くと再上昇確認。3日安値 8610 割れは短期崩れの目安。 20日線 8122.5 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+        </div>
+      </div>
+      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
+    </section>
+            
+  </div>
+</body>
+</html>
