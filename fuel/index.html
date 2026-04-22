@@ -3,526 +3,1196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>2026年4月22日 短期仕掛け候補</title>
+  <title>2026-04-22 短期候補レポート</title>
   <style>
-    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; background: radial-gradient(circle at top left, #fff9f0 0%, #f8fbff 45%, #eef3fb 100%); color: #222; line-height: 1.45; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 20px 16px 24px; }
-    .hero { background: linear-gradient(135deg, #ffffff 0%, #fff8ef 50%, #eef4ff 100%); border: 1px solid #e6edf8; border-radius: 22px; padding: 22px 18px; margin-bottom: 18px; box-shadow: 0 10px 28px rgba(27,45,94,.06); }
-    .hero-date { font-size: 30px; font-weight: 800; color: #2f3a46; margin-bottom: 6px; }
-    .hero-title { font-size: 30px; font-weight: 800; color: #1f2937; margin: 0 0 14px 0; }
-    .lead { color: #51606f; margin: 0 0 8px; font-size: 14px; }
-    .sublead { color: #7a8591; margin: 0; font-size: 12px; }
-    .nav-links { margin-top: 12px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .nav-links a { background: #edf2ff; color: #334; padding: 8px 12px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff; text-decoration: none; }
-    .history-top { text-align: right; font-size: 12px; color: #7a8591; margin-top: 12px; }
-    .note { background: #eef6ff; border-radius: 14px; padding: 11px 13px; margin-bottom: 18px; font-size: 13px; color: #35557f; border: 1px solid #d7e8ff; line-height: 1.6; }
-    .summary-box { background: #fff7e8; border-radius: 16px; padding: 14px; margin-bottom: 18px; border: 1px solid #f4e4bd; }
-    .summary-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .tier-summary { display: grid; grid-template-columns: 1fr; gap: 12px; margin-bottom: 18px; }
-    .tier-box { border-radius: 18px; padding: 16px; border: 2px solid #e6edf8; background: #fff; }
-    .tier-box.tier1-plus { border-color: #d92d20; background: #fff0ee; box-shadow: 0 10px 28px rgba(217,45,32,.10); }
-    .tier-box.tier1 { border-color: #d92d20; background: #fff4f2; }
-    .tier-box.tier2 { border-color: #c89b2b; background: #fff8e7; }
-    .tier-box.tier3 { border-color: #98a2b3; background: #f6f7f9; }
-    .tier-box-head { font-size: 12px; font-weight: 700; color: #667085; margin-bottom: 4px; }
-    .tier-box-title { font-size: 18px; font-weight: 800; margin-bottom: 6px; }
-    .tier-box-stat { font-size: 13px; color: #475467; margin-bottom: 4px; }
-    .tier-box-note { font-size: 13px; color: #344054; margin-top: 8px; }
-    .tier-box-count { margin-top: 10px; font-size: 13px; font-weight: 700; color: #1d2939; }
-    .card { background: rgba(255,255,255,0.92); border-radius: 18px; padding: 16px; margin-bottom: 16px; box-shadow: 0 8px 22px rgba(0,0,0,.045); border: 2px solid rgba(230,235,245,.9); }
-    .card.tier1-plus { border-color: #d92d20; background: linear-gradient(180deg, #fff9f7 0%, #fff0ee 100%); box-shadow: 0 10px 28px rgba(217,45,32,.12); }
-    .card.tier1 { border-color: #d92d20; background: linear-gradient(180deg, #fffefe 0%, #fff4f2 100%); }
-    .card.tier2 { border-color: #c89b2b; background: linear-gradient(180deg, #fffef8 0%, #fff8e7 100%); }
-    .card.tier3 { border-color: #98a2b3; background: linear-gradient(180deg, #ffffff 0%, #f6f7f9 100%); }
-    .rank { font-size: 13px; color: #777; margin-bottom: 4px; }
-    .tier-chip { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #eef2ff; color: #344054; font-weight: 700; }
-    .card.tier1-plus .tier-chip, .card.tier1 .tier-chip { background: #fee4e2; color: #b42318; }
-    .card.tier2 .tier-chip { background: #fef0c7; color: #b54708; }
-    .card.tier3 .tier-chip { background: #eaecf0; color: #475467; }
-    h2 { margin: 0 0 8px; font-size: 22px; line-height: 1.2; word-break: break-word; }
-    .meta { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; color: #666; margin-bottom: 6px; }
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
-    .badge { background: #edf2ff; color: #334; padding: 6px 10px; border-radius: 999px; font-size: 13px; border: 1px solid #dce4ff; }
-    .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px; }
-    .columns { display: grid; grid-template-columns: 1fr; gap: 10px; }
-    .columns h3 { margin: 0 0 6px; font-size: 18px; }
-    ul { margin: 0; padding-left: 20px; }
-    li { margin-bottom: 6px; }
-    .observation { margin-top: 10px; font-size: 13px; color: #51606f; }
-    @media (min-width: 760px) { .summary-grid { grid-template-columns: repeat(4, 1fr); } .columns { grid-template-columns: repeat(2, 1fr); } .tier-summary { grid-template-columns: repeat(3, 1fr); } }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.5; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 20px 14px 40px; }
+
+    /* ─── Hero ─── */
+    .hero { background: linear-gradient(135deg, #1a1f36 0%, #2d3a6b 60%, #1a3a5c 100%); border-radius: 20px; padding: 28px 24px; margin-bottom: 18px; color: #fff; }
+    .hero-date { font-size: 13px; letter-spacing: .06em; opacity: .75; margin-bottom: 4px; }
+    .hero-title { font-size: 26px; font-weight: 800; margin: 0 0 10px; }
+    .hero-sub { font-size: 13px; opacity: .8; margin: 0 0 16px; line-height: 1.6; }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+    .nav-links a { background: rgba(255,255,255,.15); color: #fff; padding: 7px 13px; border-radius: 999px; font-size: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,.2); }
+    .nav-links a:hover { background: rgba(255,255,255,.25); }
+    .hero-meta { margin-top: 12px; font-size: 12px; opacity: .6; }
+
+    /* ─── Entry Rules ─── */
+    .entry-guide { background: #fffbeb; border: 1.5px solid #f59e0b; border-radius: 14px; padding: 14px 16px; margin-bottom: 16px; }
+    .entry-guide h3 { margin: 0 0 8px; font-size: 14px; color: #92400e; }
+    .entry-rules { display: grid; grid-template-columns: 1fr; gap: 6px; font-size: 13px; }
+    .rule-ok { background: #dcfce7; border-radius: 8px; padding: 8px 12px; color: #14532d; border: 1px solid #bbf7d0; }
+    .rule-ng { background: #fee2e2; border-radius: 8px; padding: 8px 12px; color: #7f1d1d; border: 1px solid #fecaca; }
+    .rule-info { background: #eff6ff; border-radius: 8px; padding: 8px 12px; color: #1e3a8a; border: 1px solid #bfdbfe; }
+
+    /* ─── Day Summary ─── */
+    .summary-bar { background: #fff; border-radius: 14px; padding: 14px 16px; margin-bottom: 16px; border: 1px solid #e2e8f0; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .summary-stat { text-align: center; }
+    .summary-stat strong { display: block; font-size: 22px; }
+    .summary-stat span { font-size: 11px; color: #64748b; }
+
+    /* ─── Tier Grid ─── */
+    .tier-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .tier-box { border-radius: 14px; padding: 14px 16px; border: 2px solid #e2e8f0; background: #fff; }
+    .tier-box.tier1-plus { border-color: #d92d20; background: linear-gradient(160deg,#fff0ee,#fff9f7); }
+    .tier-box.tier1 { border-color: #e8513c; background: #fffaf9; }
+    .tier-box.tier2 { border-color: #d4a017; background: #fffdf5; }
+    .tier-box.tier3 { border-color: #94a3b8; background: #f8fafc; }
+    .tier-box-label { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .tier-box-title { font-size: 13px; color: #374151; margin-bottom: 6px; font-weight: 600; }
+    .tier-box-stat { font-size: 12px; color: #6b7280; }
+    .tier-box-note { font-size: 12px; color: #374151; margin-top: 6px; }
+    .tier-box-count { margin-top: 10px; font-size: 14px; font-weight: 700; }
+    .count-some { color: #d92d20; }
+    .count-zero { color: #94a3b8; }
+
+    /* ─── Strategy Legend ─── */
+    .legend { background: #fff; border-radius: 14px; padding: 14px 16px; margin-bottom: 18px; border: 1px solid #e2e8f0; }
+    .legend h3 { margin: 0 0 12px; font-size: 14px; color: #374151; }
+    .legend-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .legend-item { background: #f8fafc; border-radius: 10px; padding: 10px 12px; border: 1px solid #e2e8f0; }
+    .legend-name { font-size: 13px; font-weight: 700; color: #1e293b; margin-bottom: 3px; }
+    .legend-desc { font-size: 12px; color: #64748b; line-height: 1.5; }
+
+    /* ─── Cards ─── */
+    .card { background: #fff; border-radius: 18px; padding: 18px; margin-bottom: 16px; border: 2px solid #e2e8f0; box-shadow: 0 4px 16px rgba(0,0,0,.05); }
+    .card.tier1-plus { border-color: #d92d20; background: linear-gradient(170deg,#fffaf9 0%,#fff4f2 100%); box-shadow: 0 6px 24px rgba(217,45,32,.12); }
+    .card.tier1 { border-color: #e8513c; background: linear-gradient(170deg,#fffefe 0%,#fff6f5 100%); }
+    .card.tier2 { border-color: #d4a017; background: linear-gradient(170deg,#fffffe 0%,#fffbf0 100%); }
+    .card.tier3 { border-color: #94a3b8; background: #fafbfc; }
+
+    .card-header { margin-bottom: 14px; }
+    .rank-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+    .tier-chip { padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; background: #f1f5f9; color: #475569; }
+    .card.tier1-plus .tier-chip, .card.tier1 .tier-chip { background: #fee2e2; color: #991b1b; }
+    .card.tier2 .tier-chip { background: #fef3c7; color: #92400e; }
+    .strat-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+    .strat-badge { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+    h2 { margin: 0 0 6px; font-size: 21px; font-weight: 800; line-height: 1.2; word-break: break-word; }
+    .meta { display: flex; gap: 12px; font-size: 13px; color: #64748b; flex-wrap: wrap; }
+
+    /* ─── Price Row ─── */
+    .price-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+    .price-box { background: #f8fafc; border-radius: 12px; padding: 10px 12px; border: 1px solid #e2e8f0; text-align: center; }
+    .price-label { font-size: 11px; color: #64748b; margin-bottom: 4px; font-weight: 600; letter-spacing: .04em; }
+    .price-val { font-size: 18px; font-weight: 800; color: #1a202c; }
+    .price-val.tp { color: #15803d; }
+    .price-val.sl { color: #dc2626; }
+    .price-val.alloc { font-size: 14px; color: #1d4ed8; }
+    .price-note { font-size: 10px; color: #94a3b8; margin-top: 2px; }
+    .tp-box { border-color: #bbf7d0; background: #f0fdf4; }
+    .sl-box { border-color: #fecaca; background: #fff5f5; }
+    .alloc-box { border-color: #bfdbfe; background: #eff6ff; }
+
+    /* ─── Entry Rule per card ─── */
+    .entry-rule { background: #fefce8; border: 1px solid #fde68a; border-radius: 10px; padding: 10px 12px; font-size: 12px; color: #713f12; margin-bottom: 12px; line-height: 1.6; }
+    .entry-rule .ok { color: #15803d; font-weight: 700; }
+    .entry-rule .ng { color: #dc2626; font-weight: 700; }
+
+    /* ─── Data Grid ─── */
+    .data-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+    .data-item { background: #f8fafc; border-radius: 10px; padding: 8px 10px; border: 1px solid #e2e8f0; }
+    .data-item.chg-up { background: #fff5f5; border-color: #fecaca; }
+    .data-item.chg-down { background: #f0fdf4; border-color: #bbf7d0; }
+    .data-item.chg-flat { background: #fafaf9; }
+    .data-label { font-size: 11px; color: #64748b; margin-bottom: 2px; }
+    .data-val { font-size: 14px; font-weight: 700; color: #1a202c; }
+
+    /* ─── Columns ─── */
+    .columns { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+    .columns h3 { margin: 0 0 6px; font-size: 14px; color: #374151; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin-bottom: 5px; font-size: 13px; color: #374151; }
+    .obs { font-size: 13px; color: #374151; margin: 0 0 6px; }
+    .trade-note { font-size: 13px; color: #374151; margin: 0 0 6px; }
+    .five-day { font-size: 12px; color: #64748b; margin: 0; background: #f1f5f9; padding: 6px 10px; border-radius: 8px; }
+
+    /* ─── Footer note ─── */
+    .footnote { background: #f8fafc; border-radius: 12px; padding: 12px 14px; font-size: 12px; color: #64748b; border: 1px solid #e2e8f0; margin-top: 24px; line-height: 1.7; }
+
+    @media (min-width: 600px) {
+      .tier-summary { grid-template-columns: repeat(4, 1fr); }
+      .price-row { grid-template-columns: repeat(4, 1fr); }
+      .data-grid { grid-template-columns: repeat(3, 1fr); }
+      .columns { grid-template-columns: repeat(2, 1fr); }
+      .legend-grid { grid-template-columns: repeat(2, 1fr); }
+      .entry-rules { grid-template-columns: repeat(2, 1fr); }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
+
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero-date">2026年4月22日</div>
-      <div class="hero-title">短期仕掛け候補</div>
-      <p class="lead">毎日19:30ごろ更新。機関の空売り残高、信用データ、値動きの押し目を見て、近いうちに動きやすい候補を出すページです。</p>
-      <p class="sublead">分析基準日: 2026-04-21</p>
-      <div class="nav-links">
-        <a href="/ai-trade-report-public/">押し目候補ページへ</a>
-        <a href="/ai-trade-report-public/stealth/">ステルス候補ページへ</a>
-        <a href="/ai-trade-report-public/fuel/history/">過去の分析一覧へ</a>
-      </div>
-      <div class="history-top"><span>保存件数:</span> 1件</div>
+      <div class="hero-date">分析基準日: 2026-04-21</div>
+      <div class="hero-title">短期候補レポート</div>
+      <p class="hero-sub">機関投資家の空売り残高・信用データ・直近の値動きをもとに、<br>近いうちに動きやすい銘柄を毎日19:30頃に選出します。</p>
+      <div class="hero-meta">毎日19:30ごろ更新 / この公開版は1ページ完結です</div>
     </section>
-    <div class="note">このページの説明文はAI APIに毎回書かせているものではなく、ルールと数値をもとにこちらで整形して出しています。運用は「+10%で利確」「-8%で損切り」「5営業日たって動かなければいったん見直し」が基本です。Tier1+ は特別候補、Tier1 は本命、Tier2 は余力枠、Tier3 は補助です。</div>
-    <div class="summary-box">
-      <div class="summary-grid">
-        <div><strong>候補数</strong><br>25件</div>
-        <div><strong>👑 Tier1+</strong><br>1件</div>
-        <div><strong>Tier1</strong><br>14件</div>
-        <div><strong>Tier2/3</strong><br>10件</div>
+
+    <!-- Global Entry Rules -->
+    <div class="entry-guide">
+      <h3>📋 翌朝エントリーの基本ルール（2026年4月22日（エントリー目安日））</h3>
+      <div class="entry-rules">
+        <div class="rule-ok">✅ 寄り値が前日終値の <strong>−8%〜+5%以内</strong>　→　予定通りエントリー</div>
+        <div class="rule-ng">🚫 寄り値が前日終値から <strong>+5%超</strong> のギャップアップ　→　見送り（すでに割高）</div>
+        <div class="rule-ng">🚫 寄り値が前日終値から <strong>−8%超</strong> のギャップダウン　→　見送り（シグナル崩れ）</div>
+        <div class="rule-info">📌 TP/SL目安は <strong>前日終値ベースの参考値</strong>。実際は寄り値から±10% / −8% で再設定してください。</div>
       </div>
     </div>
+
+    <!-- Day Summary -->
+    <div class="summary-bar">
+      <div class="summary-stat"><strong>25</strong><span>本日の候補数</span></div>
+      <div class="summary-stat"><strong style="color:#d92d20">1</strong><span>👑 特選</span></div>
+      <div class="summary-stat"><strong style="color:#d92d20">14</strong><span>本命</span></div>
+      <div class="summary-stat"><strong style="color:#c89b2b">6</strong><span>対抗</span></div>
+      <div class="summary-stat"><strong style="color:#64748b">4</strong><span>穴</span></div>
+    </div>
+
+    <!-- Tier Legend -->
     <section class="tier-summary">
       
         <div class="tier-box tier1-plus">
-          <div class="tier-box-head">👑 Tier1+</div>
-          <div class="tier-box-title">最上位。強い条件が重なった特別候補</div>
-          <div class="tier-box-stat">最上位の重なりシグナル</div>
-          <div class="tier-box-stat">出現目安: 月0-2件</div>
-          <div class="tier-box-note">出たら最優先で検討。資金の30%目安。</div>
-          <div class="tier-box-count">本日 1件</div>
+          <div class="tier-box-label">👑 特選</div>
+          <div class="tier-box-title">条件が複数重なった最優先候補</div>
+          <div class="tier-box-stat">出現頻度: ごく稀</div>
+          <div class="tier-box-note">出たら最優先で検討する位置付け。</div>
+          <div class="tier-box-count count-some">本日 <strong>1</strong>件</div>
         </div>
             
         <div class="tier-box tier1">
-          <div class="tier-box-head">Tier1</div>
-          <div class="tier-box-title">本命。まず最初に見る候補</div>
-          <div class="tier-box-stat">利確到達率 41.8-48.5% / 平均実現 +1.63〜+2.48%</div>
-          <div class="tier-box-stat">出現目安: 月10件前後</div>
-          <div class="tier-box-note">出たら基本的に買う前提。資金の20-25%目安。</div>
-          <div class="tier-box-count">本日 14件</div>
+          <div class="tier-box-label">本命</div>
+          <div class="tier-box-title">メイン条件を通過した本命候補</div>
+          <div class="tier-box-stat">出現頻度: 毎日数件</div>
+          <div class="tier-box-note">基本的に候補に入れる位置付け。</div>
+          <div class="tier-box-count count-some">本日 <strong>14</strong>件</div>
         </div>
             
         <div class="tier-box tier2">
-          <div class="tier-box-head">Tier2</div>
-          <div class="tier-box-title">実用枠。余力がある日に使う候補</div>
-          <div class="tier-box-stat">利確到達率 41.62% / 平均実現 +1.55%</div>
-          <div class="tier-box-stat">出現目安: 月12-18件</div>
-          <div class="tier-box-note">Tier1が少ない日に余力で拾う。資金の10-15%目安。</div>
-          <div class="tier-box-count">本日 6件</div>
+          <div class="tier-box-label">対抗</div>
+          <div class="tier-box-title">条件をやや緩めた実用候補</div>
+          <div class="tier-box-stat">出現頻度: 毎日数件</div>
+          <div class="tier-box-note">本命の余力で拾う位置付け。</div>
+          <div class="tier-box-count count-some">本日 <strong>6</strong>件</div>
         </div>
             
         <div class="tier-box tier3">
-          <div class="tier-box-head">Tier3</div>
-          <div class="tier-box-title">補助枠。最後に足す候補</div>
-          <div class="tier-box-stat">利確到達率 35.4-40.3% / 平均実現 +0.99〜+1.08%</div>
-          <div class="tier-box-stat">出現目安: 月10件超</div>
-          <div class="tier-box-note">本命不足時の補助。資金の5-10%目安。</div>
-          <div class="tier-box-count">本日 4件</div>
+          <div class="tier-box-label">穴</div>
+          <div class="tier-box-title">補助シグナル通過。参考程度</div>
+          <div class="tier-box-stat">出現頻度: 毎日数件</div>
+          <div class="tier-box-note">本命が少ない日の参考枠。</div>
+          <div class="tier-box-count count-some">本日 <strong>4</strong>件</div>
         </div>
             
     </section>
+
+    <!-- Strategy Legend -->
+    <section class="legend">
+      <h3>📖 シグナルの種類（各候補がどのパターンに該当するか）</h3>
+      <div class="legend-grid">
+        
+        <div class="legend-item">
+          <div class="legend-name">◆ 需給圧力型</div>
+          <div class="legend-desc">需給バランスが大きく偏り、反対方向への圧力が蓄積していると判断される局面。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">◆ 需給滞留型</div>
+          <div class="legend-desc">需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">◇ 需給注目型</div>
+          <div class="legend-desc">需給注目銘柄として継続観察が必要な局面。条件はやや広め。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">◯ 押し目吸収型</div>
+          <div class="legend-desc">一度動いた後の調整局面で、調整が落ち着きつつある銘柄。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">△ 反転狙い型</div>
+          <div class="legend-desc">大きく押した銘柄の反発局面を狙う、ややリスクの高いパターン。</div>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Candidate Cards -->
     
     <section class="card tier1-plus">
-      <div class="rank"><span class="tier-chip">1位 / 👑 Tier1+</span></div>
-      <h2>60720 地盤ネットホールディングス</h2>
-      <div class="meta">
-        <span>市場: スタンダード</span>
-        <span>業種: サービス業</span>
-        <span>通過型: 踏み上げ本命, 押し目吸収補助</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">1位 / 👑 特選</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給圧力型</span><span class="strat-badge">△ 反転狙い型</span></div>
+        </div>
+        <h2>60720 地盤ネットホールディングス</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 サービス業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の30%</span>
-        <span class="badge">機関の空売り残高: 11.22%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.58%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,154</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥1,269</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥1,062</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の30%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>1,154円</div>
-        <div><strong>利確目安</strong><br>1,269円</div>
-        <div><strong>損切り目安</strong><br>1,062円</div>
-        <div><strong>動き始めからの日数</strong><br>17日</div>
-        <div><strong>高値からの押し</strong><br>-34.19%</div>
-        <div><strong>売買代金の勢い</strong><br>0.88%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-up">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">圧力増（売り増し）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">1ヶ月以内</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">非常に深い</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>踏み上げ本命: 機関の空売り残高 11.22% / 機関の売り増し +0.006 / 動き始めから17日</li><li>押し目吸収補助: 高値からの押し -34.2% / 動き始めから17日 / 売買代金の勢い 0.88倍</li></ul>
+          <ul><li>◆ 需給圧力型 — 需給バランスが大きく偏り、反対方向への圧力が蓄積していると判断される局面。</li><li>△ 反転狙い型 — 大きく押した銘柄の反発局面を狙う、ややリスクの高いパターン。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>E通過かつJPX空売り8%以上。厳選エリート。</li><li>直近5日高値 1250 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1043 割れは短期的に形が悪くなる目安。 20日移動平均線 980.75 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>直近5日高値 1250 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1043 を割ると短期的な下落サインになる目安。 20日移動平均線 980.75 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">2位 / Tier1</span></div>
-      <h2>66130 ＱＤレーザ</h2>
-      <div class="meta">
-        <span>市場: グロース</span>
-        <span>業種: 電気機器</span>
-        <span>通過型: 売り圧横ばい本命, 売り圧横ばい実用枠, 押し目実用枠</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">2位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span></div>
+        </div>
+        <h2>66130 ＱＤレーザ</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 電気機器</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 8.88%</span>
-        <span class="badge">機関の売り増し/買い戻し: -0.19%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,609</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥1,770</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥1,480</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>1,609円</div>
-        <div><strong>利確目安</strong><br>1,770円</div>
-        <div><strong>損切り目安</strong><br>1,480円</div>
-        <div><strong>動き始めからの日数</strong><br>5日</div>
-        <div><strong>高値からの押し</strong><br>-14.48%</div>
-        <div><strong>売買代金の勢い</strong><br>1.43%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">中程度</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 8.88% / 機関の売り残が大きく変わっていない -0.0019 / 動き始めから5日</li><li>売り圧横ばい実用枠: 機関の空売り残高 8.88% / 機関の売り残が大きく変わっていない -0.0019 / 高値からの押し -14.5%</li><li>押し目実用枠: 機関の空売り残高 8.88% / 高値からの押し -14.5% / 動き始めから5日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li><li>◇ 需給注目型 — 需給注目銘柄として継続観察が必要な局面。条件はやや広め。</li><li>◯ 押し目吸収型 — 一度動いた後の調整局面で、調整が落ち着きつつある銘柄。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>当日高値 1877 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1270 割れは短期的に形が悪くなる目安。 20日移動平均線 1237.6 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>長い上ヒゲで上値での売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 1877 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1270 を割ると短期的な下落サインになる目安。 20日移動平均線 1237.6 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">長い上ヒゲで上値での売りが出ています。高値更新できるか確認が必要です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">3位 / Tier1</span></div>
-      <h2>57260 大阪チタニウムテクノロジーズ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 非鉄金属</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">3位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>57260 大阪チタニウムテクノロジーズ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 非鉄金属</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 8.88%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.31%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥2,752</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥3,027</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥2,532</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>2,752円</div>
-        <div><strong>利確目安</strong><br>3,027円</div>
-        <div><strong>損切り目安</strong><br>2,532円</div>
-        <div><strong>動き始めからの日数</strong><br>37日</div>
-        <div><strong>高値からの押し</strong><br>-35.36%</div>
-        <div><strong>売買代金の勢い</strong><br>0.76%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-up">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">圧力増（売り増し）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">2ヶ月以内</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">非常に深い</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 8.88% / 機関の売り残が大きく変わっていない +0.0031 / 動き始めから37日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 2960 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2603 割れは短期的に形が悪くなる目安。 20日移動平均線 2728.15 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>直近5日高値 2960 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2603 を割ると短期的な下落サインになる目安。 20日移動平均線 2728.15 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">4位 / Tier1</span></div>
-      <h2>39940 マネーフォワード</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 情報･通信業</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">4位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>39940 マネーフォワード</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 情報･通信業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 8.79%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.13%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥5,751</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥6,326</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥5,291</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>5,751円</div>
-        <div><strong>利確目安</strong><br>6,326円</div>
-        <div><strong>損切り目安</strong><br>5,291円</div>
-        <div><strong>動き始めからの日数</strong><br>4日</div>
-        <div><strong>高値からの押し</strong><br>1.97%</div>
-        <div><strong>売買代金の勢い</strong><br>1.64%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">浅め</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 8.79% / 機関の売り残が大きく変わっていない +0.0013 / 動き始めから4日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 5782 をを超えると再び上に向かう形を確認しやすい。直近3日安値 4912 割れは短期的に形が悪くなる目安。 20日移動平均線 4028.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>しっかりした陽線で引けており、買いが優勢です。</p>
+          <p class='trade-note'>直近5日高値 5782 をを超えると再び上に向かう形を確認しやすい。直近3日安値 4912 を割ると短期的な下落サインになる目安。 20日移動平均線 4028.8 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">しっかりした陽線で引けており、買いが優勢です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">5位 / Tier1</span></div>
-      <h2>31030 ユニチカ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 繊維製品</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">5位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>31030 ユニチカ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 繊維製品</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 7.81%</span>
-        <span class="badge">機関の売り増し/買い戻し: -0.24%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥3,045</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥3,350</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥2,801</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>3,045円</div>
-        <div><strong>利確目安</strong><br>3,350円</div>
-        <div><strong>損切り目安</strong><br>2,801円</div>
-        <div><strong>動き始めからの日数</strong><br>2日</div>
-        <div><strong>高値からの押し</strong><br>-1.30%</div>
-        <div><strong>売買代金の勢い</strong><br>1.82%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">浅め</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 7.81% / 機関の売り残が大きく変わっていない -0.0024 / 動き始めから2日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 4380 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2656 割れは短期的に形が悪くなる目安。 20日移動平均線 1699.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 4380 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2656 を割ると短期的な下落サインになる目安。 20日移動平均線 1699.8 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">安く引けてで、まだ上値での売りの圧力が残っています。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">6位 / Tier1</span></div>
-      <h2>36560 ＫＬａｂ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 情報･通信業</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">6位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>36560 ＫＬａｂ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 情報･通信業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 7.46%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.07%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥309</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥340</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥284</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>309円</div>
-        <div><strong>利確目安</strong><br>340円</div>
-        <div><strong>損切り目安</strong><br>284円</div>
-        <div><strong>動き始めからの日数</strong><br>4日</div>
-        <div><strong>高値からの押し</strong><br>-15.86%</div>
-        <div><strong>売買代金の勢い</strong><br>2.18%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">中程度</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">過熱気味</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 7.46% / 機関の売り残が大きく変わっていない +0.0007 / 動き始めから4日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 389 をを超えると再び上に向かう形を確認しやすい。当日安値 297 割れは短期的に形が悪くなる目安。 20日移動平均線 324.8 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>直近5日高値 389 をを超えると再び上に向かう形を確認しやすい。当日安値 297 を割ると短期的な下落サインになる目安。 20日移動平均線 324.8 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">7位 / Tier1</span></div>
-      <h2>95190 レノバ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 電気･ガス業</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">7位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>95190 レノバ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 電気･ガス業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 5.19%</span>
-        <span class="badge">機関の売り増し/買い戻し: -0.11%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥980</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥1,078</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥902</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>980円</div>
-        <div><strong>利確目安</strong><br>1,078円</div>
-        <div><strong>損切り目安</strong><br>902円</div>
-        <div><strong>動き始めからの日数</strong><br>16日</div>
-        <div><strong>高値からの押し</strong><br>-6.68%</div>
-        <div><strong>売買代金の勢い</strong><br>1.06%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">1ヶ月以内</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">浅め</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 5.19% / 機関の売り残が大きく変わっていない -0.0011 / 動き始めから16日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 1120 をを超えると再び上に向かう形を確認しやすい。当日安値 977 割れは短期的に形が悪くなる目安。 20日移動平均線 931.95 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 1120 をを超えると再び上に向かう形を確認しやすい。当日安値 977 を割ると短期的な下落サインになる目安。 20日移動平均線 931.95 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">安く引けてで、まだ上値での売りの圧力が残っています。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">8位 / Tier1</span></div>
-      <h2>36970 ＳＨＩＦＴ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 情報･通信業</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">8位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>36970 ＳＨＩＦＴ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 情報･通信業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 5.16%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.01%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥676.70</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥744</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥623</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>676.70円</div>
-        <div><strong>利確目安</strong><br>744円</div>
-        <div><strong>損切り目安</strong><br>623円</div>
-        <div><strong>動き始めからの日数</strong><br>2日</div>
-        <div><strong>高値からの押し</strong><br>-11.81%</div>
-        <div><strong>売買代金の勢い</strong><br>1.99%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">中程度</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 5.16% / 機関の売り残が大きく変わっていない +0.0001 / 動き始めから2日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 755.9 をを超えると再び上に向かう形を確認しやすい。当日安値 666.6 割れは短期的に形が悪くなる目安。 20日移動平均線 661.38 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 755.9 をを超えると再び上に向かう形を確認しやすい。当日安値 666.6 を割ると短期的な下落サインになる目安。 20日移動平均線 661.38 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">安く引けてで、まだ上値での売りの圧力が残っています。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">9位 / Tier1</span></div>
-      <h2>78590 アルメディオ</h2>
-      <div class="meta">
-        <span>市場: スタンダード</span>
-        <span>業種: その他製品</span>
-        <span>通過型: 売り圧横ばい本命, 売り圧横ばい実用枠, 押し目実用枠, 押し目吸収補助</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">9位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span><span class="strat-badge">△ 反転狙い型</span></div>
+        </div>
+        <h2>78590 アルメディオ</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 その他製品</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 6.26%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.20%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥355</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥391</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥327</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>355円</div>
-        <div><strong>利確目安</strong><br>391円</div>
-        <div><strong>損切り目安</strong><br>327円</div>
-        <div><strong>動き始めからの日数</strong><br>15日</div>
-        <div><strong>高値からの押し</strong><br>-20.62%</div>
-        <div><strong>売買代金の勢い</strong><br>0.86%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">1ヶ月以内</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">深め</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 6.26% / 機関の売り残が大きく変わっていない +0.0020 / 動き始めから15日</li><li>売り圧横ばい実用枠: 機関の空売り残高 6.26% / 機関の売り残が大きく変わっていない +0.0020 / 高値からの押し -20.6%</li><li>押し目実用枠: 機関の空売り残高 6.26% / 高値からの押し -20.6% / 動き始めから15日</li><li>押し目吸収補助: 高値からの押し -20.6% / 動き始めから15日 / 売買代金の勢い 0.86倍</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li><li>◇ 需給注目型 — 需給注目銘柄として継続観察が必要な局面。条件はやや広め。</li><li>◯ 押し目吸収型 — 一度動いた後の調整局面で、調整が落ち着きつつある銘柄。</li><li>△ 反転狙い型 — 大きく押した銘柄の反発局面を狙う、ややリスクの高いパターン。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>直近5日高値 358 をを超えると再び上に向かう形を確認しやすい。直近3日安値 299 割れは短期的に形が悪くなる目安。 20日移動平均線 281.4 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>しっかりした陽線で引けており、買いが優勢です。</p>
+          <p class='trade-note'>直近5日高値 358 をを超えると再び上に向かう形を確認しやすい。直近3日安値 299 を割ると短期的な下落サインになる目安。 20日移動平均線 281.4 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">しっかりした陽線で引けており、買いが優勢です。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">10位 / Tier1</span></div>
-      <h2>59850 サンコール</h2>
-      <div class="meta">
-        <span>市場: スタンダード</span>
-        <span>業種: 金属製品</span>
-        <span>通過型: 売り圧横ばい本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">10位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
+        </div>
+        <h2>59850 サンコール</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 金属製品</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 5.68%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.14%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,592</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥1,751</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥1,465</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>1,592円</div>
-        <div><strong>利確目安</strong><br>1,751円</div>
-        <div><strong>損切り目安</strong><br>1,465円</div>
-        <div><strong>動き始めからの日数</strong><br>28日</div>
-        <div><strong>高値からの押し</strong><br>-41.14%</div>
-        <div><strong>売買代金の勢い</strong><br>1.57%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">1ヶ月以内</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">非常に深い</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 5.68% / 機関の売り残が大きく変わっていない +0.0014 / 動き始めから28日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 1846 をを超えると再び上に向かう形を確認しやすい。当日安値 1575 割れは短期的に形が悪くなる目安。 20日移動平均線 1515.55 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 1846 をを超えると再び上に向かう形を確認しやすい。当日安値 1575 を割ると短期的な下落サインになる目安。 20日移動平均線 1515.55 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">安く引けてで、まだ上値での売りの圧力が残っています。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">11位 / Tier1</span></div>
-      <h2>26670 イメージ　ワン</h2>
-      <div class="meta">
-        <span>市場: スタンダード</span>
-        <span>業種: 卸売業</span>
-        <span>通過型: 売り圧横ばい本命, 売り圧横ばい実用枠, 押し目実用枠</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">11位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span></div>
+        </div>
+        <h2>26670 イメージ　ワン</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 卸売業</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 6.60%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.15%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥234</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥257</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥215</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>234円</div>
-        <div><strong>利確目安</strong><br>257円</div>
-        <div><strong>損切り目安</strong><br>215円</div>
-        <div><strong>動き始めからの日数</strong><br>6日</div>
-        <div><strong>高値からの押し</strong><br>-10.47%</div>
-        <div><strong>売買代金の勢い</strong><br>1.15%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">中程度</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>売り圧横ばい本命: 機関の空売り残高 6.60% / 機関の売り残が大きく変わっていない +0.0015 / 動き始めから6日</li><li>売り圧横ばい実用枠: 機関の空売り残高 6.60% / 機関の売り残が大きく変わっていない +0.0015 / 高値からの押し -10.5%</li><li>押し目実用枠: 機関の空売り残高 6.60% / 高値からの押し -10.5% / 動き始めから6日</li></ul>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li><li>◇ 需給注目型 — 需給注目銘柄として継続観察が必要な局面。条件はやや広め。</li><li>◯ 押し目吸収型 — 一度動いた後の調整局面で、調整が落ち着きつつある銘柄。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>G_core/G_wide/F_mainの3戦略通過。Tier1相当。</li><li>直近5日高値 269 をを超えると再び上に向かう形を確認しやすい。当日安値 231 割れは短期的に形が悪くなる目安。 20日移動平均線 233.55 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 269 をを超えると再び上に向かう形を確認しやすい。当日安値 231 を割ると短期的な下落サインになる目安。 20日移動平均線 233.55 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">安く引けてで、まだ上値での売りの圧力が残っています。</div>
     </section>
             
     <section class="card tier1">
-      <div class="rank"><span class="tier-chip">12位 / Tier1</span></div>
-      <h2>64900 ＰＩＬＬＡＲ</h2>
-      <div class="meta">
-        <span>市場: プライム</span>
-        <span>業種: 機械</span>
-        <span>通過型: 踏み上げ本命</span>
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">12位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給圧力型</span></div>
+        </div>
+        <h2>64900 ＰＩＬＬＡＲ</h2>
+        <div class="meta">
+          <span>📍 プライム</span>
+          <span>🏭 機械</span>
+        </div>
       </div>
-      <div class="badges">
-        <span class="badge">推奨配分: 資金の20-25%</span>
-        <span class="badge">機関の空売り残高: 5.53%</span>
-        <span class="badge">機関の売り増し/買い戻し: 0.64%</span>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥8,830</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥9,713</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥8,124</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
       </div>
-      <div class="price-grid">
-        <div><strong>終値</strong><br>8,830円</div>
-        <div><strong>利確目安</strong><br>9,713円</div>
-        <div><strong>損切り目安</strong><br>8,124円</div>
-        <div><strong>動き始めからの日数</strong><br>6日</div>
-        <div><strong>高値からの押し</strong><br>-7.82%</div>
-        <div><strong>売買代金の勢い</strong><br>1.41%倍</div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
       </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">強い</div>
+        </div>
+        <div class="data-item chg-up">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">圧力増（売り増し）</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">浅め</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">活発</div>
+        </div>
+      </div>
+
       <div class="columns">
         <div>
           <h3>候補理由</h3>
-          <ul><li>踏み上げ本命: 機関の空売り残高 5.53% / 機関の売り増し +0.006 / 動き始めから6日</li></ul>
+          <ul><li>◆ 需給圧力型 — 需給バランスが大きく偏り、反対方向への圧力が蓄積していると判断される局面。</li></ul>
         </div>
         <div>
-          <h3>使い方</h3>
-          <ul><li>Claude本命戦略を通過。</li><li>直近5日高値 9540 をを超えると再び上に向かう形を確認しやすい。直近3日安値 8610 割れは短期的に形が悪くなる目安。 20日移動平均線 8122.5 付近を保てるかも確認。</li><li>5営業日で+5%以上なら継続、-5%〜+5%は手仕舞い、-5%以下は撤退検討。</li></ul>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>直近5日高値 9540 をを超えると再び上に向かう形を確認しやすい。直近3日安値 8610 を割ると短期的な下落サインになる目安。 20日移動平均線 8122.5 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
-      <div class="observation">下ヒゲが長く、押し目を拾う買いが入った形です。</div>
     </section>
             
+
+    <!-- Footnote -->
+    <div class="footnote">
+      <strong>ご注意：</strong>このページは過去データの統計に基づく参考情報であり、将来の利益を保証するものではありません。
+      投資判断はご自身の責任で行ってください。TP/SL・利確基準はあくまで目安です。
+      本ページはAI APIによるリアルタイム分析ではなく、定量ルールとデータベースをもとに自動生成しています。
+    </div>
+
   </div>
 </body>
 </html>
