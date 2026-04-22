@@ -32,6 +32,13 @@
     .summary-stat { text-align: center; }
     .summary-stat strong { display: block; font-size: 22px; }
     .summary-stat span { font-size: 11px; color: #64748b; }
+    .regime-box { border-radius: 14px; padding: 12px 14px; margin-bottom: 16px; border: 1px solid #e2e8f0; }
+    .regime-box.good { background: #ecfdf3; border-color: #bbf7d0; }
+    .regime-box.neutral { background: #fff7ed; border-color: #fed7aa; }
+    .regime-box.caution { background: #fff1f2; border-color: #fecdd3; }
+    .regime-box.unknown { background: #f8fafc; border-color: #e2e8f0; }
+    .regime-title { font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+    .regime-note { font-size: 12px; color: #475569; }
 
     /* ─── Tier Grid ─── */
     .tier-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
@@ -164,6 +171,11 @@
       <div class="summary-stat"><strong style="color:#c89b2b">2</strong><span>対抗</span></div>
       <div class="summary-stat"><strong style="color:#64748b">2</strong><span>穴</span></div>
     </div>
+
+    <section class="regime-box good">
+      <div class="regime-title">📉 今日の地合い: 地合いOK</div>
+      <div class="regime-note">広い市場指数が20日線の上で、20日線の向きも上。シグナルをそのまま取りやすい日です。</div>
+    </section>
 
     <!-- Tier Legend -->
     <section class="tier-summary">

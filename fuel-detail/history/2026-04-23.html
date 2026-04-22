@@ -31,6 +31,17 @@
     .summary-stat { text-align: center; }
     .summary-stat strong { display: block; font-size: 22px; color: #e2e8f0; }
     .summary-stat span { font-size: 11px; color: #94a3b8; }
+    .regime-box { border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; border: 1px solid #334155; }
+    .regime-box.good { background: #052e1c; border-color: #166534; }
+    .regime-box.neutral { background: #451a03; border-color: #d97706; }
+    .regime-box.caution { background: #4c0519; border-color: #be123c; }
+    .regime-box.unknown { background: #0f172a; }
+    .regime-title { font-size: 14px; font-weight: 800; color: #f8fafc; margin-bottom: 4px; }
+    .regime-note { font-size: 12px; color: #cbd5e1; margin-bottom: 8px; }
+    .regime-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .regime-item { background: rgba(15,23,42,.55); border: 1px solid rgba(148,163,184,.25); border-radius: 8px; padding: 8px 10px; }
+    .regime-item-label { font-size: 10px; color: #94a3b8; font-family: ui-monospace, monospace; }
+    .regime-item-val { font-size: 13px; font-weight: 700; color: #f8fafc; font-family: ui-monospace, monospace; }
 
     .strategy-counts { background: #1e293b; border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; border: 1px solid #334155; font-size: 13px; }
     .strategy-counts strong { color: #fbbf24; }
@@ -158,6 +169,16 @@
       <div class="summary-stat"><strong style="color:#f87171">4</strong><span>Tier1</span></div>
       <div class="summary-stat"><strong style="color:#f59e0b">2</strong><span>Tier2</span></div>
       <div class="summary-stat"><strong style="color:#94a3b8">2</strong><span>Tier3</span></div>
+    </div>
+
+    <div class="regime-box good">
+      <div class="regime-title">📉 今日の地合い: 地合いOK</div>
+      <div class="regime-note">広い市場指数が20日線の上で、20日線の向きも上。シグナルをそのまま取りやすい日です。</div>
+      <div class="regime-grid">
+        <div class="regime-item"><div class="regime-item-label">INDEX_CLOSE</div><div class="regime-item-val">3744.99</div></div>
+        <div class="regime-item"><div class="regime-item-label">MA20</div><div class="regime-item-val">3696.61</div></div>
+        <div class="regime-item"><div class="regime-item-label">MA20_SLOPE</div><div class="regime-item-val">4.7</div></div>
+      </div>
     </div>
 
     <div class="strategy-counts">
