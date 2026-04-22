@@ -159,8 +159,8 @@
     <!-- Day Summary -->
     <div class="summary-bar">
       <div class="summary-stat"><strong>25</strong><span>本日の候補数</span></div>
-      <div class="summary-stat"><strong style="color:#d92d20">1</strong><span>👑 特選</span></div>
-      <div class="summary-stat"><strong style="color:#d92d20">14</strong><span>本命</span></div>
+      <div class="summary-stat"><strong style="color:#d92d20">0</strong><span>👑 特選</span></div>
+      <div class="summary-stat"><strong style="color:#d92d20">15</strong><span>本命</span></div>
       <div class="summary-stat"><strong style="color:#c89b2b">6</strong><span>対抗</span></div>
       <div class="summary-stat"><strong style="color:#64748b">4</strong><span>穴</span></div>
     </div>
@@ -173,7 +173,7 @@
           <div class="tier-box-title">条件が複数重なった最優先候補</div>
           <div class="tier-box-stat">出現頻度: ごく稀</div>
           <div class="tier-box-note">出たら最優先で検討する位置付け。</div>
-          <div class="tier-box-count count-some">本日 <strong>1</strong>件</div>
+          <div class="tier-box-count count-zero">本日 <strong>0</strong>件</div>
         </div>
             
         <div class="tier-box tier1">
@@ -181,7 +181,7 @@
           <div class="tier-box-title">メイン条件を通過した本命候補</div>
           <div class="tier-box-stat">出現頻度: 毎日数件</div>
           <div class="tier-box-note">基本的に候補に入れる位置付け。</div>
-          <div class="tier-box-count count-some">本日 <strong>14</strong>件</div>
+          <div class="tier-box-count count-some">本日 <strong>15</strong>件</div>
         </div>
             
         <div class="tier-box tier2">
@@ -237,91 +237,10 @@
 
     <!-- Candidate Cards -->
     
-    <section class="card tier1-plus">
-      <div class="card-header">
-        <div class="rank-row">
-          <span class="tier-chip">1位 / 👑 特選</span>
-          <div class="strat-badges"><span class="strat-badge">◆ 需給圧力型</span><span class="strat-badge">△ 反転狙い型</span></div>
-        </div>
-        <h2>60720 地盤ネットホールディングス</h2>
-        <div class="meta">
-          <span>📍 スタンダード</span>
-          <span>🏭 サービス業</span>
-        </div>
-      </div>
-
-      <div class="price-row">
-        <div class="price-box">
-          <div class="price-label">前日終値</div>
-          <div class="price-val">¥1,154</div>
-          <div class="price-note">※参考値</div>
-        </div>
-        <div class="price-box tp-box">
-          <div class="price-label">利確目安</div>
-          <div class="price-val tp">¥1,269</div>
-          <div class="price-note">前日終値 +10%</div>
-        </div>
-        <div class="price-box sl-box">
-          <div class="price-label">損切り目安</div>
-          <div class="price-val sl">¥1,062</div>
-          <div class="price-note">前日終値 -8%</div>
-        </div>
-        <div class="price-box alloc-box">
-          <div class="price-label">推奨配分</div>
-          <div class="price-val alloc">資金の30%</div>
-        </div>
-      </div>
-
-      <div class="entry-rule">
-        <strong>翌朝エントリーの確認：</strong>
-        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
-        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
-        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
-        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
-      </div>
-
-      <div class="data-grid">
-        <div class="data-item">
-          <div class="data-label">需給の偏り</div>
-          <div class="data-val">非常に強い</div>
-        </div>
-        <div class="data-item chg-up">
-          <div class="data-label">需給の動き</div>
-          <div class="data-val">圧力増（売り増し）</div>
-        </div>
-        <div class="data-item">
-          <div class="data-label">動き始めから</div>
-          <div class="data-val">1ヶ月以内</div>
-        </div>
-        <div class="data-item">
-          <div class="data-label">調整の深さ</div>
-          <div class="data-val">非常に深い</div>
-        </div>
-        <div class="data-item">
-          <div class="data-label">出来高</div>
-          <div class="data-val">平常</div>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div>
-          <h3>候補理由</h3>
-          <ul><li>◆ 需給圧力型 — 需給バランスが大きく偏り、反対方向への圧力が蓄積していると判断される局面。</li><li>△ 反転狙い型 — 大きく押した銘柄の反発局面を狙う、ややリスクの高いパターン。</li></ul>
-        </div>
-        <div>
-          <h3>チャートのポイント</h3>
-          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
-          <p class='trade-note'>直近5日高値 1250 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1043 を割ると短期的な下落サインになる目安。 20日移動平均線 980.75 付近を保てるかも確認。</p>
-          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
-        </div>
-      </div>
-      <p class='followup-empty'>まだ追跡データがありません。</p>
-    </section>
-            
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">2位 / 本命</span>
+          <span class="tier-chip">1位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span></div>
         </div>
         <h2>66130 ＱＤレーザ</h2>
@@ -382,6 +301,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">活発</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">3-5日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">注目</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -391,6 +318,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: まだ機能しますが、鮮度は2日目より落ちます。</p>
           <p class='obs'>長い上ヒゲで上値での売りが出ています。高値更新できるか確認が必要です。</p>
           <p class='trade-note'>当日高値 1877 をを超えると再び上に向かう形を確認しやすい。直近3日安値 1270 を割ると短期的な下落サインになる目安。 20日移動平均線 1237.6 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -402,7 +330,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">3位 / 本命</span>
+          <span class="tier-chip">2位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>57260 大阪チタニウムテクノロジーズ</h2>
@@ -463,6 +391,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">平常</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">0日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -472,6 +408,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
           <p class='trade-note'>直近5日高値 2960 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2603 を割ると短期的な下落サインになる目安。 20日移動平均線 2728.15 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -483,7 +420,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">4位 / 本命</span>
+          <span class="tier-chip">3位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>39940 マネーフォワード</h2>
@@ -544,6 +481,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">活発</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">0日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -553,6 +498,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>しっかりした陽線で引けており、買いが優勢です。</p>
           <p class='trade-note'>直近5日高値 5782 をを超えると再び上に向かう形を確認しやすい。直近3日安値 4912 を割ると短期的な下落サインになる目安。 20日移動平均線 4028.8 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -564,7 +510,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">5位 / 本命</span>
+          <span class="tier-chip">4位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>31030 ユニチカ</h2>
@@ -625,6 +571,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">活発</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">0日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -634,6 +588,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
           <p class='trade-note'>直近5日高値 4380 をを超えると再び上に向かう形を確認しやすい。直近3日安値 2656 を割ると短期的な下落サインになる目安。 20日移動平均線 1699.8 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -645,7 +600,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">6位 / 本命</span>
+          <span class="tier-chip">5位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>36560 ＫＬａｂ</h2>
@@ -706,6 +661,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">過熱気味</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">1日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">注目</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -715,6 +678,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 需給滞留型では悪くない再確認帯です。</p>
           <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
           <p class='trade-note'>直近5日高値 389 をを超えると再び上に向かう形を確認しやすい。当日安値 297 を割ると短期的な下落サインになる目安。 20日移動平均線 324.8 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -726,7 +690,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">7位 / 本命</span>
+          <span class="tier-chip">6位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>95190 レノバ</h2>
@@ -787,6 +751,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">平常</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">0日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -796,6 +768,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
           <p class='trade-note'>直近5日高値 1120 をを超えると再び上に向かう形を確認しやすい。当日安値 977 を割ると短期的な下落サインになる目安。 20日移動平均線 931.95 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -807,7 +780,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">8位 / 本命</span>
+          <span class="tier-chip">7位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>36970 ＳＨＩＦＴ</h2>
@@ -868,6 +841,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">活発</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">1日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">注目</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -877,6 +858,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 需給滞留型では悪くない再確認帯です。</p>
           <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
           <p class='trade-note'>直近5日高値 755.9 をを超えると再び上に向かう形を確認しやすい。当日安値 666.6 を割ると短期的な下落サインになる目安。 20日移動平均線 661.38 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -888,7 +870,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">9位 / 本命</span>
+          <span class="tier-chip">8位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span><span class="strat-badge">△ 反転狙い型</span></div>
         </div>
         <h2>78590 アルメディオ</h2>
@@ -949,6 +931,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">平常</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">6-10日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">注目</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -958,6 +948,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 件数は少ないですが、うまくいく時はあります。</p>
           <p class='obs'>しっかりした陽線で引けており、買いが優勢です。</p>
           <p class='trade-note'>直近5日高値 358 をを超えると再び上に向かう形を確認しやすい。直近3日安値 299 を割ると短期的な下落サインになる目安。 20日移動平均線 281.4 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -969,7 +960,7 @@
     <section class="card tier1">
       <div class="card-header">
         <div class="rank-row">
-          <span class="tier-chip">10位 / 本命</span>
+          <span class="tier-chip">9位 / 本命</span>
           <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span></div>
         </div>
         <h2>59850 サンコール</h2>
@@ -1030,6 +1021,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">活発</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">0日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -1039,8 +1038,99 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
           <p class='trade-note'>直近5日高値 1846 をを超えると再び上に向かう形を確認しやすい。当日安値 1575 を割ると短期的な下落サインになる目安。 20日移動平均線 1515.55 付近を保てるかも確認。</p>
+          <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
+        </div>
+      </div>
+      <p class='followup-empty'>まだ追跡データがありません。</p>
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">10位 / 本命</span>
+          <div class="strat-badges"><span class="strat-badge">◆ 需給滞留型</span><span class="strat-badge">◇ 需給注目型</span><span class="strat-badge">◯ 押し目吸収型</span></div>
+        </div>
+        <h2>26670 イメージ　ワン</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 卸売業</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥234</div>
+          <div class="price-note">※参考値</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">利確目安</div>
+          <div class="price-val tp">¥257</div>
+          <div class="price-note">前日終値 +10%</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">損切り目安</div>
+          <div class="price-val sl">¥215</div>
+          <div class="price-note">前日終値 -8%</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="entry-rule">
+        <strong>翌朝エントリーの確認：</strong>
+        寄り値が <span class="ok">前日終値 -8%〜+5%以内</span> なら予定通り買い。
+        <span class="ng">+5%超で寄ったら見送り</span>（割高）、
+        <span class="ng">-8%超で寄ったら見送り</span>（シグナル崩れ）。
+        TP/SLは <strong>寄り値から再計算</strong> して指値・逆指値を設定。
+      </div>
+
+      <div class="data-grid">
+        <div class="data-item">
+          <div class="data-label">需給の偏り</div>
+          <div class="data-val">非常に強い</div>
+        </div>
+        <div class="data-item chg-flat">
+          <div class="data-label">需給の動き</div>
+          <div class="data-val">横ばい</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">動き始めから</div>
+          <div class="data-val">ごく最近</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">調整の深さ</div>
+          <div class="data-val">中程度</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">出来高</div>
+          <div class="data-val">平常</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">3-5日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">注目</div>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由</h3>
+          <ul><li>◆ 需給滞留型 — 需給の片寄りが解消されないまま停滞しており、ポジションが滞留している状態。</li><li>◇ 需給注目型 — 需給注目銘柄として継続観察が必要な局面。条件はやや広め。</li><li>◯ 押し目吸収型 — 一度動いた後の調整局面で、調整が落ち着きつつある銘柄。</li></ul>
+        </div>
+        <div>
+          <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: まだ機能しますが、鮮度は2日目より落ちます。</p>
+          <p class='obs'>安く引けてで、まだ上値での売りの圧力が残っています。</p>
+          <p class='trade-note'>直近5日高値 269 をを超えると再び上に向かう形を確認しやすい。当日安値 231 を割ると短期的な下落サインになる目安。 20日移動平均線 233.55 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
         </div>
       </div>
@@ -1111,6 +1201,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">静か</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">1日目</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -1120,6 +1218,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>しっかりした陽線で引けており、買いが優勢です。</p>
           <p class='trade-note'>直近5日高値 203 をを超えると再び上に向かう形を確認しやすい。直近3日安値 189 を割ると短期的な下落サインになる目安。 20日移動平均線 192.3 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
@@ -1192,6 +1291,14 @@
           <div class="data-label">出来高</div>
           <div class="data-val">静か</div>
         </div>
+        <div class="data-item">
+          <div class="data-label">連続登場</div>
+          <div class="data-val">11日以上</div>
+        </div>
+        <div class="data-item">
+          <div class="data-label">連投評価</div>
+          <div class="data-val">中立</div>
+        </div>
       </div>
 
       <div class="columns">
@@ -1201,6 +1308,7 @@
         </div>
         <div>
           <h3>チャートのポイント</h3>
+          <p class='obs'>連投メモ: 連投帯の優位性は限定的です。</p>
           <p class='obs'>長い上ヒゲで上値での売りが出ています。高値更新できるか確認が必要です。</p>
           <p class='trade-note'>当日高値 1570 をを超えると再び上に向かう形を確認しやすい。当日安値 1549 を割ると短期的な下落サインになる目安。 20日移動平均線 1585.4 付近を保てるかも確認。</p>
           <p class='five-day'>⏱ 5営業日ルール: +5%以上なら継続保有、±5%以内なら手仕舞い、-5%以下なら撤退検討</p>
