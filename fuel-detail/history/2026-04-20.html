@@ -1,0 +1,2498 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>【詳細版】2026-04-20 候補レポート</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif; background: #0f172a; color: #e2e8f0; line-height: 1.5; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 20px 14px 40px; }
+
+    .hero { background: linear-gradient(135deg, #1e1b4b 0%, #312e81 60%, #1e3a8a 100%); border-radius: 16px; padding: 24px 22px; margin-bottom: 18px; border: 1px solid #4338ca; }
+    .hero-tag { display: inline-block; background: #ef4444; color: #fff; padding: 3px 10px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .05em; margin-bottom: 10px; }
+    .hero-date { font-size: 13px; opacity: .75; margin-bottom: 4px; }
+    .hero-title { font-size: 24px; font-weight: 800; margin: 0 0 10px; }
+    .hero-sub { font-size: 13px; opacity: .8; margin: 0 0 14px; line-height: 1.7; }
+    .nav-links { display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+    .nav-links a { background: rgba(255,255,255,.12); color: #fff; padding: 7px 13px; border-radius: 999px; font-size: 12px; text-decoration: none; border: 1px solid rgba(255,255,255,.2); }
+    .nav-links a:hover { background: rgba(255,255,255,.2); }
+    .hero-meta { margin-top: 12px; font-size: 11px; opacity: .55; }
+
+    .entry-guide { background: #422006; border: 1.5px solid #d97706; border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; color: #fef3c7; }
+    .entry-guide h3 { margin: 0 0 8px; font-size: 14px; color: #fde68a; }
+    .entry-rules { display: grid; grid-template-columns: 1fr; gap: 6px; font-size: 13px; }
+    .rule-ok { background: #064e3b; border-radius: 8px; padding: 8px 12px; color: #d1fae5; }
+    .rule-ng { background: #7f1d1d; border-radius: 8px; padding: 8px 12px; color: #fee2e2; }
+    .rule-info { background: #1e3a8a; border-radius: 8px; padding: 8px 12px; color: #dbeafe; }
+
+    .summary-bar { background: #1e293b; border-radius: 12px; padding: 14px 16px; margin-bottom: 16px; border: 1px solid #334155; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    .summary-stat { text-align: center; }
+    .summary-stat strong { display: block; font-size: 22px; color: #e2e8f0; }
+    .summary-stat span { font-size: 11px; color: #94a3b8; }
+
+    .strategy-counts { background: #1e293b; border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; border: 1px solid #334155; font-size: 13px; }
+    .strategy-counts strong { color: #fbbf24; }
+
+    .tier-summary { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 16px; }
+    .tier-box { border-radius: 12px; padding: 14px 16px; border: 1.5px solid #334155; background: #1e293b; }
+    .tier-box.tier1-plus { border-color: #ef4444; background: linear-gradient(160deg,#7f1d1d,#1e293b); }
+    .tier-box.tier1 { border-color: #f87171; background: linear-gradient(160deg,#451a1a,#1e293b); }
+    .tier-box.tier2 { border-color: #f59e0b; background: linear-gradient(160deg,#451a03,#1e293b); }
+    .tier-box.tier3 { border-color: #94a3b8; }
+    .tier-box-label { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+    .tier-box-title { font-size: 12px; color: #cbd5e1; margin-bottom: 6px; font-family: ui-monospace, monospace; }
+    .tier-box-stat { font-size: 12px; color: #94a3b8; }
+    .tier-box-note { font-size: 12px; color: #cbd5e1; margin-top: 6px; }
+    .tier-box-count { margin-top: 10px; font-size: 13px; color: #fbbf24; }
+
+    .legend { background: #1e293b; border-radius: 12px; padding: 14px 16px; margin-bottom: 18px; border: 1px solid #334155; }
+    .legend h3 { margin: 0 0 12px; font-size: 14px; color: #cbd5e1; }
+    .legend-grid { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .legend-item { background: #0f172a; border-radius: 10px; padding: 10px 12px; border: 1px solid #334155; }
+    .legend-name { font-size: 13px; font-weight: 700; color: #e2e8f0; margin-bottom: 3px; }
+    .legend-desc { font-size: 12px; color: #94a3b8; line-height: 1.5; font-family: ui-monospace, monospace; }
+
+    .card { background: #1e293b; border-radius: 14px; padding: 18px; margin-bottom: 16px; border: 1.5px solid #334155; box-shadow: 0 4px 16px rgba(0,0,0,.3); }
+    .card.tier1-plus { border-color: #ef4444; box-shadow: 0 6px 24px rgba(239,68,68,.15); }
+    .card.tier1 { border-color: #f87171; }
+    .card.tier2 { border-color: #f59e0b; }
+    .card.tier3 { border-color: #94a3b8; }
+
+    .card-header { margin-bottom: 14px; }
+    .rank-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+    .tier-chip { padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: 800; background: #334155; color: #e2e8f0; }
+    .score-chip { padding: 4px 10px; border-radius: 999px; font-size: 11px; background: #422006; color: #fcd34d; font-family: ui-monospace, monospace; }
+    .card.tier1-plus .tier-chip, .card.tier1 .tier-chip { background: #7f1d1d; color: #fee2e2; }
+    .card.tier2 .tier-chip { background: #451a03; color: #fed7aa; }
+    .strat-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+    .strat-badge { background: #1e3a8a; color: #dbeafe; border: 1px solid #3b82f6; padding: 3px 9px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+    h2 { margin: 0 0 6px; font-size: 22px; font-weight: 800; line-height: 1.2; word-break: break-word; color: #f1f5f9; }
+    .meta { display: flex; gap: 12px; font-size: 12px; color: #94a3b8; flex-wrap: wrap; }
+
+    .price-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 12px; }
+    .price-box { background: #0f172a; border-radius: 10px; padding: 10px 12px; border: 1px solid #334155; text-align: center; }
+    .price-label { font-size: 10px; color: #94a3b8; margin-bottom: 4px; font-weight: 600; letter-spacing: .04em; }
+    .price-val { font-size: 17px; font-weight: 800; color: #e2e8f0; }
+    .price-val.tp { color: #22c55e; }
+    .price-val.sl { color: #ef4444; }
+    .price-val.alloc { font-size: 13px; color: #60a5fa; }
+    .tp-box { border-color: #166534; }
+    .sl-box { border-color: #991b1b; }
+    .alloc-box { border-color: #1e40af; }
+
+    .data-section { margin-bottom: 12px; }
+    .data-section h3 { margin: 0 0 8px; font-size: 12px; color: #fbbf24; letter-spacing: .05em; text-transform: uppercase; }
+    .data-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .data-item { background: #0f172a; border-radius: 8px; padding: 8px 10px; border: 1px solid #334155; }
+    .data-item.chg-up { background: #2c0e0e; border-color: #991b1b; }
+    .data-item.chg-down { background: #052e1c; border-color: #166534; }
+    .data-label { font-size: 10px; color: #94a3b8; margin-bottom: 2px; font-family: ui-monospace, monospace; }
+    .data-val { font-size: 13px; font-weight: 700; color: #e2e8f0; font-family: ui-monospace, monospace; }
+
+    .scores { font-size: 12px; color: #cbd5e1; font-family: ui-monospace, monospace; background: #0f172a; padding: 10px; border-radius: 8px; border: 1px solid #334155; }
+    .scores code { background: #422006; color: #fcd34d; padding: 1px 6px; border-radius: 4px; font-size: 11px; }
+
+    .columns { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 10px; }
+    .columns h3 { margin: 0 0 6px; font-size: 13px; color: #fbbf24; }
+    ul { margin: 0; padding-left: 18px; }
+    li { margin-bottom: 5px; font-size: 13px; color: #cbd5e1; }
+    li code { background: #422006; color: #fcd34d; padding: 1px 5px; border-radius: 3px; font-size: 11px; }
+    .obs, .trade-note { font-size: 12px; color: #94a3b8; margin: 4px 0; }
+
+    .tier-note { background: #0f172a; border-radius: 8px; padding: 8px 12px; margin-top: 12px; font-size: 12px; color: #cbd5e1; border: 1px solid #334155; }
+    .tier-note strong { color: #fbbf24; }
+    .followup { margin-top: 14px; padding-top: 12px; border-top: 1px solid #334155; }
+    .followup h3 { margin: 0 0 8px; font-size: 13px; color: #fbbf24; }
+    .followup-summary { margin: 0 0 8px; font-size: 12px; color: #cbd5e1; }
+    .followup-empty { margin: 0; font-size: 12px; color: #94a3b8; }
+    .followup-table-wrap { overflow-x: auto; }
+    .followup-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+    .followup-table th, .followup-table td { padding: 6px 8px; border-bottom: 1px solid #334155; text-align: right; white-space: nowrap; font-family: ui-monospace, monospace; }
+    .followup-table th:nth-child(1), .followup-table th:nth-child(2), .followup-table td:nth-child(1), .followup-table td:nth-child(2) { text-align: left; }
+
+    .footnote { background: #0f172a; border-radius: 12px; padding: 12px 14px; font-size: 11px; color: #64748b; border: 1px solid #334155; margin-top: 24px; line-height: 1.7; }
+
+    @media (min-width: 700px) {
+      .tier-summary { grid-template-columns: repeat(2, 1fr); }
+      .price-row { grid-template-columns: repeat(4, 1fr); }
+      .data-grid { grid-template-columns: repeat(3, 1fr); }
+      .columns { grid-template-columns: repeat(2, 1fr); }
+      .legend-grid { grid-template-columns: repeat(2, 1fr); }
+      .entry-rules { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1000px) {
+      .tier-summary { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="hero-tag">🔒 PRIVATE / 詳細版</div>
+      <div class="hero-date">分析基準日: 2026-04-17</div>
+      <div class="hero-title">候補詳細レポート - 2026年4月20日 エントリー予定</div>
+      <p class="hero-sub">生の数値、戦略コード、バックテスト統計、シグナルスコアまで含む完全版。<br>このページは公開ページからリンクされていない。</p>
+      <div class="nav-links">
+        <a href="./history/">過去の詳細データ一覧</a>
+      </div>
+      <div class="hero-meta">履歴保存: 8件 / 最大60日間</div>
+    </section>
+
+    <div class="entry-guide">
+      <h3>📋 翌朝エントリーの基本ルール（2026年4月20日）</h3>
+      <div class="entry-rules">
+        <div class="rule-ok">✅ 寄り値が前日終値の <strong>−8%〜+5%以内</strong> → 予定通りエントリー</div>
+        <div class="rule-ng">🚫 寄り値が前日終値から <strong>+5%超</strong> のギャップアップ → 見送り</div>
+        <div class="rule-ng">🚫 寄り値が前日終値から <strong>−8%超</strong> のギャップダウン → 見送り</div>
+        <div class="rule-info">📌 TP/SL は 寄り値 × 1.10 / × 0.92 で再設定</div>
+      </div>
+    </div>
+
+    <div class="summary-bar">
+      <div class="summary-stat"><strong>15</strong><span>候補数</span></div>
+      <div class="summary-stat"><strong style="color:#ef4444">1</strong><span>👑 Tier1+</span></div>
+      <div class="summary-stat"><strong style="color:#f87171">5</strong><span>Tier1</span></div>
+      <div class="summary-stat"><strong style="color:#f59e0b">6</strong><span>Tier2</span></div>
+      <div class="summary-stat"><strong style="color:#94a3b8">3</strong><span>Tier3</span></div>
+    </div>
+
+    <div class="strategy-counts">
+      <strong>戦略別通過数:</strong> 踏み上げ爆発型: <strong>5</strong> / 初動後押し目型: <strong>10</strong> / 売り残圧力型: <strong>1</strong> / 深押し反転型: <strong>2</strong> / 売り残蓄積型: <strong>6</strong>
+    </div>
+
+    <section class="tier-summary">
+      
+        <div class="tier-box tier1-plus">
+          <div class="tier-box-label">👑 Tier1+</div>
+          <div class="tier-box-title">EとG_core同時通過 or E通過かつJPX≥8%</div>
+          <div class="tier-box-stat">📊 最上位の重なりシグナル</div>
+          <div class="tier-box-stat">⏱ 月0-2件</div>
+          <div class="tier-box-note">資金の30%目安。出たら最優先で検討。</div>
+          <div class="tier-box-count">本日 <strong>1</strong>件</div>
+        </div>
+            
+        <div class="tier-box tier1">
+          <div class="tier-box-label">Tier1</div>
+          <div class="tier-box-title">Claude本命戦略（E_v3 or G_core）通過</div>
+          <div class="tier-box-stat">📊 利確到達率 41.8-48.5% / 平均実現 +1.63〜+2.48%</div>
+          <div class="tier-box-stat">⏱ 月10件前後</div>
+          <div class="tier-box-note">資金の20-25%目安。基本的に買う前提。</div>
+          <div class="tier-box-count">本日 <strong>5</strong>件</div>
+        </div>
+            
+        <div class="tier-box tier2">
+          <div class="tier-box-label">Tier2</div>
+          <div class="tier-box-title">G_wide通過。実用枠</div>
+          <div class="tier-box-stat">📊 利確到達率 41.62% / 平均実現 +1.55%</div>
+          <div class="tier-box-stat">⏱ 月12-18件</div>
+          <div class="tier-box-note">資金の10-15%目安。本命の余力で拾う。</div>
+          <div class="tier-box-count">本日 <strong>6</strong>件</div>
+        </div>
+            
+        <div class="tier-box tier3">
+          <div class="tier-box-label">Tier3</div>
+          <div class="tier-box-title">F_main / B_v3 のみ。補助</div>
+          <div class="tier-box-stat">📊 利確到達率 35.4-40.3% / 平均実現 +0.99〜+1.08%</div>
+          <div class="tier-box-stat">⏱ 月10件超</div>
+          <div class="tier-box-note">資金の5-10%目安。本命不足時の補助。</div>
+          <div class="tier-box-count">本日 <strong>3</strong>件</div>
+        </div>
+            
+    </section>
+
+    <section class="legend">
+      <h3>📖 戦略の正体（内部閾値含む）</h3>
+      <div class="legend-grid">
+        
+        <div class="legend-item">
+          <div class="legend-name">🔥 踏み上げ爆発型 (E_v3)</div>
+          <div class="legend-desc">JPX機関空売り残≥5%、急増中（前回比+0.5%以上）。買い戻し圧力が積み上がっており、反転で爆発的踏み上げ。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">⚡ 売り残圧力型 (G_core)</div>
+          <div class="legend-desc">JPX機関空売り残≥3%、横ばい（変化±0.3%以内）、動意あり、押し目あり。需給滞留型の本命。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">📈 売り残蓄積型 (G_wide)</div>
+          <div class="legend-desc">JPX機関空売り残≥1.5%、横ばい維持。G_coreの条件を緩めた実用版。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">🎯 初動後押し目型 (F_main)</div>
+          <div class="legend-desc">動意後押し目完了。dip -10〜-25%、出来高静か、MA20付近回復、20日線上向き。</div>
+        </div>
+        
+        <div class="legend-item">
+          <div class="legend-name">↩️ 深押し反転型 (B_v3)</div>
+          <div class="legend-desc">動意後の深押し（-30%以上）からの反転。リスク高、リターンも大。</div>
+        </div>
+        
+      </div>
+    </section>
+
+    
+    <section class="card tier1-plus">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">1位 / 👑 Tier1+</span>
+          <span class="score-chip">best=3.0</span>
+          <div class="strat-badges"><span class="strat-badge">🔥 踏み上げ爆発型 (E_v3)</span></div>
+        </div>
+        <h2>59850 サンコール</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 金属製品</span>
+          <span>💰 ADV20: 1,582,180千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,645</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,810</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥1,513</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の30%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">8.6200%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+1.0000%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">5社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">26日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-41.14%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.510%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">9.06%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">-16.900%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">15.12%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">14.08%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">-17.04%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">31.73</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">踏み上げ爆発型: <code>3.0</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🔥 &lt;code&gt;E_v3&lt;/code&gt;: JPX空売り 8.62% / 空売り増加 +0.010 / 動意から26日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥1,758</strong></li>
+            <li>サポート (3日安値): <strong>¥1,580</strong></li>
+            <li>リスクライン: <strong>¥1,508.30</strong></li>
+            <li>MA20: <strong>¥1,508.30</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 1758 を上抜くと再上昇確認。3日安値 1580 割れは短期崩れの目安。 20日線 1508.3 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> E通過かつJPX空売り8%以上。厳選エリート。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,725</strong> を基準に集計。最大上昇 <strong>3.13%</strong> / 最大下落 <strong>-8.70%</strong> / 最新終値差 <strong>-7.71%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,725</td><td>¥1,779</td><td>¥1,614</td><td>¥1,674</td><td>3.13%</td><td>-6.43%</td><td>-2.96%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,692</td><td>¥1,692</td><td>¥1,575</td><td>¥1,592</td><td>-1.91%</td><td>-8.70%</td><td>-7.71%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">2位 / Tier1</span>
+          <span class="score-chip">best=5.192</span>
+          <div class="strat-badges"><span class="strat-badge">🔥 踏み上げ爆発型 (E_v3)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>281A0 インフォメティス</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 情報･通信業</span>
+          <span>💰 ADV20: 3,799,125千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥808</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥889</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥743</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">7.2800%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+1.0700%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">4社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">9日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-16.53%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.170%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">38.06%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">10.600%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">28.87%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">56.29%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">35.57%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">1981.6</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">踏み上げ爆発型: <code>1.8</code> / 初動後押し目型: <code>5.192</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🔥 &lt;code&gt;E_v3&lt;/code&gt;: JPX空売り 7.28% / 空売り増加 +0.011 / 動意から9日</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 7.28% / 押し -16.5% / 動意から9日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥857</strong></li>
+            <li>サポート (3日安値): <strong>¥661</strong></li>
+            <li>リスクライン: <strong>¥585.25</strong></li>
+            <li>MA20: <strong>¥585.25</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 857 を上抜くと再上昇確認。3日安値 661 割れは短期崩れの目安。 20日線 585.25 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> Claude本命戦略を通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥803</strong> を基準に集計。最大上昇 <strong>32.00%</strong> / 最大下落 <strong>0.00%</strong> / 最新終値差 <strong>11.46%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥803</td><td>¥958</td><td>¥803</td><td>¥958</td><td>19.30%</td><td>0.00%</td><td>19.30%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥958</td><td>¥1,060</td><td>¥870</td><td>¥895</td><td>32.00%</td><td>8.34%</td><td>11.46%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">3位 / Tier1</span>
+          <span class="score-chip">best=3.556</span>
+          <div class="strat-badges"><span class="strat-badge">⚡ 売り残圧力型 (G_core)</span></div>
+        </div>
+        <h2>26670 イメージ　ワン</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 卸売業</span>
+          <span>💰 ADV20: 436,010千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥254</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥279</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥234</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">6.2800%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+0.1400%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">1社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">4日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-3.49%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.450%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">10.12%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">1.500%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">8.09%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">16.51%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">13.39%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">2.41</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">1.0</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">2.72</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残圧力型: <code>3.556</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>⚡ &lt;code&gt;G_core&lt;/code&gt;: JPX空売り 6.28% / 空売り横ばい +0.0014 / 動意から4日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥269</strong></li>
+            <li>サポート (当日安値): <strong>¥250</strong></li>
+            <li>リスクライン: <strong>¥230.65</strong></li>
+            <li>MA20: <strong>¥230.65</strong></li>
+          </ul>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>5日高値 269 を上抜くと再上昇確認。当日安値 250 割れは短期崩れの目安。 20日線 230.65 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> Claude本命戦略を通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥251</strong> を基準に集計。最大上昇 <strong>1.59%</strong> / 最大下落 <strong>-7.97%</strong> / 最新終値差 <strong>-6.77%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥251</td><td>¥255</td><td>¥248</td><td>¥250</td><td>1.59%</td><td>-1.20%</td><td>-0.40%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥248</td><td>¥250</td><td>¥231</td><td>¥234</td><td>-0.40%</td><td>-7.97%</td><td>-6.77%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">4位 / Tier1</span>
+          <span class="score-chip">best=2.6</span>
+          <div class="strat-badges"><span class="strat-badge">🔥 踏み上げ爆発型 (E_v3)</span></div>
+        </div>
+        <h2>66130 ＱＤレーザ</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 電気機器</span>
+          <span>💰 ADV20: 9,632,610千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,285</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,414</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥1,182</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">7.9200%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+2.5800%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">3社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">3日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-14.48%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.430%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">5.98%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">-13.050%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">18.32%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">23.80%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">-16.88%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">740.38</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">踏み上げ爆発型: <code>2.6</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🔥 &lt;code&gt;E_v3&lt;/code&gt;: JPX空売り 7.92% / 空売り増加 +0.026 / 動意から3日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥1,489</strong></li>
+            <li>サポート (当日安値): <strong>¥1,270</strong></li>
+            <li>リスクライン: <strong>¥1,212.55</strong></li>
+            <li>MA20: <strong>¥1,212.55</strong></li>
+          </ul>
+          <p class='obs'>陰線引けで、まだ戻り売りの圧力が残っています。</p>
+          <p class='trade-note'>5日高値 1489 を上抜くと再上昇確認。当日安値 1270 割れは短期崩れの目安。 20日線 1212.55 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> Claude本命戦略を通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,290</strong> を基準に集計。最大上昇 <strong>45.50%</strong> / 最大下落 <strong>-1.16%</strong> / 最新終値差 <strong>24.73%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,290</td><td>¥1,585</td><td>¥1,275</td><td>¥1,585</td><td>22.87%</td><td>-1.16%</td><td>22.87%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,675</td><td>¥1,877</td><td>¥1,538</td><td>¥1,609</td><td>45.50%</td><td>19.22%</td><td>24.73%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">5位 / Tier1</span>
+          <span class="score-chip">best=2.0</span>
+          <div class="strat-badges"><span class="strat-badge">🔥 踏み上げ爆発型 (E_v3)</span></div>
+        </div>
+        <h2>52460 ＥＬＥＭＥＮＴＳ</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 情報･通信業</span>
+          <span>💰 ADV20: 732,145千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥718</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥790</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥661</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">7.1400%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+0.5600%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">5社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">3日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-6.56%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">2.470%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">14.66%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">5.500%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">13.61%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">18.29%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">18.09%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">15.83</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">踏み上げ爆発型: <code>2.0</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🔥 &lt;code&gt;E_v3&lt;/code&gt;: JPX空売り 7.14% / 空売り増加 +0.006 / 動意から3日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥748</strong></li>
+            <li>サポート (3日安値): <strong>¥684</strong></li>
+            <li>リスクライン: <strong>¥626.20</strong></li>
+            <li>MA20: <strong>¥626.20</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 748 を上抜くと再上昇確認。3日安値 684 割れは短期崩れの目安。 20日線 626.2 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> Claude本命戦略を通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥718</strong> を基準に集計。最大上昇 <strong>2.37%</strong> / 最大下落 <strong>-5.15%</strong> / 最新終値差 <strong>-3.48%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥718</td><td>¥730</td><td>¥705</td><td>¥721</td><td>1.67%</td><td>-1.81%</td><td>0.42%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥731</td><td>¥735</td><td>¥681</td><td>¥693</td><td>2.37%</td><td>-5.15%</td><td>-3.48%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier1">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">6位 / Tier1</span>
+          <span class="score-chip">best=1.8</span>
+          <div class="strat-badges"><span class="strat-badge">🔥 踏み上げ爆発型 (E_v3)</span><span class="strat-badge">↩️ 深押し反転型 (B_v3)</span></div>
+        </div>
+        <h2>60720 地盤ネットホールディングス</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 サービス業</span>
+          <span>💰 ADV20: 2,663,525千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,050</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,155</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥966</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の20-25%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">7.4600%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+1.3700%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">4社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">15日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-34.19%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.850%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">11.16%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">12.600%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">13.64%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">25.75%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">31.58%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">12.01</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">1.0</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0.33</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">踏み上げ爆発型: <code>1.8</code> / 深押し反転型: <code>1.5</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🔥 &lt;code&gt;E_v3&lt;/code&gt;: JPX空売り 7.46% / 空売り増加 +0.014 / 動意から15日</li><li>↩️ &lt;code&gt;B_v3&lt;/code&gt;: 押し -34.2% / 動意から15日 / 出来高 0.85x</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥1,250</strong></li>
+            <li>サポート (3日安値): <strong>¥972</strong></li>
+            <li>リスクライン: <strong>¥944.60</strong></li>
+            <li>MA20: <strong>¥944.60</strong></li>
+          </ul>
+          <p class='obs'>陰線引けで、まだ戻り売りの圧力が残っています。</p>
+          <p class='trade-note'>5日高値 1250 を上抜くと再上昇確認。3日安値 972 割れは短期崩れの目安。 20日線 944.6 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> Claude本命戦略を通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,053</strong> を基準に集計。最大上昇 <strong>10.16%</strong> / 最大下落 <strong>0.00%</strong> / 最新終値差 <strong>9.59%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,053</td><td>¥1,150</td><td>¥1,053</td><td>¥1,106</td><td>9.21%</td><td>0.00%</td><td>5.03%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,120</td><td>¥1,160</td><td>¥1,088</td><td>¥1,154</td><td>10.16%</td><td>3.32%</td><td>9.59%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">7位 / Tier2</span>
+          <span class="score-chip">best=4.396</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>71190 ハルメクホールディングス</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 小売業</span>
+          <span>💰 ADV20: 20,635千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,554</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,709</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥1,430</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">12.6400%</div>
+          </div>
+          <div class="data-item chg-flat">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-0.0100%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">1社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">22日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-11.65%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.360%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">-2.24%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">-3.650%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">-6.22%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">-2.26%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">-4.49%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">4.85</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">0.16</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0.35</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>4.396</code> / 初動後押し目型: <code>4.396</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 12.64% / 空売り横ばい -0.0001 / 押し -11.6%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 12.64% / 押し -11.6% / 動意から22日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥1,561</strong></li>
+            <li>サポート (当日安値): <strong>¥1,550</strong></li>
+            <li>リスクライン: <strong>¥1,550</strong></li>
+            <li>MA20: <strong>¥1,589.65</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 1561 を上抜くと再上昇確認。当日安値 1550 割れは短期崩れの目安。 20日線 1589.65 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,553</strong> を基準に集計。最大上昇 <strong>1.42%</strong> / 最大下落 <strong>-0.26%</strong> / 最新終値差 <strong>0.32%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,553</td><td>¥1,575</td><td>¥1,553</td><td>¥1,556</td><td>1.42%</td><td>0.00%</td><td>0.19%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,551</td><td>¥1,570</td><td>¥1,549</td><td>¥1,558</td><td>1.09%</td><td>-0.26%</td><td>0.32%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">8位 / Tier2</span>
+          <span class="score-chip">best=4.229</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span><span class="strat-badge">↩️ 深押し反転型 (B_v3)</span></div>
+        </div>
+        <h2>78590 アルメディオ</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 その他製品</span>
+          <span>💰 ADV20: 926,635千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥315</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥346</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥290</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">8.1900%</div>
+          </div>
+          <div class="data-item chg-flat">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-0.0100%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">5社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">13日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-20.62%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.620%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">16.93%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">3.600%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">14.55%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">17.54%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">29.63%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">3.7</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">0.69</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0.95</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>4.229</code> / 初動後押し目型: <code>4.229</code> / 深押し反転型: <code>3.0</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 8.19% / 空売り横ばい -0.0001 / 押し -20.6%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 8.19% / 押し -20.6% / 動意から13日</li><li>↩️ &lt;code&gt;B_v3&lt;/code&gt;: 押し -20.6% / 動意から13日 / 出来高 0.62x</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥318</strong></li>
+            <li>サポート (3日安値): <strong>¥287</strong></li>
+            <li>リスクライン: <strong>¥269.40</strong></li>
+            <li>MA20: <strong>¥269.40</strong></li>
+          </ul>
+          <p class='obs'>実体陽線で引けており、買いが優勢です。</p>
+          <p class='trade-note'>5日高値 318 を上抜くと再上昇確認。3日安値 287 割れは短期崩れの目安。 20日線 269.4 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥316</strong> を基準に集計。最大上昇 <strong>13.29%</strong> / 最大下落 <strong>-0.32%</strong> / 最新終値差 <strong>12.34%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥316</td><td>¥345</td><td>¥315</td><td>¥334</td><td>9.18%</td><td>-0.32%</td><td>5.70%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥341</td><td>¥358</td><td>¥338</td><td>¥355</td><td>13.29%</td><td>6.96%</td><td>12.34%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">9位 / Tier2</span>
+          <span class="score-chip">best=3.84</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>66960 トラース・オン・プロダクト</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 電気機器</span>
+          <span>💰 ADV20: 392,145千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥389</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥428</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥358</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">4.9300%</div>
+          </div>
+          <div class="data-item chg-flat">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-0.0400%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">4社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">5日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-17.63%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.890%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">3.22%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">0.750%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">-8.47%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">4.01%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">4.01%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>3.84</code> / 初動後押し目型: <code>3.84</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 4.93% / 空売り横ばい -0.0004 / 押し -17.6%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 4.93% / 押し -17.6% / 動意から5日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥446</strong></li>
+            <li>サポート (当日安値): <strong>¥383</strong></li>
+            <li>リスクライン: <strong>¥376.85</strong></li>
+            <li>MA20: <strong>¥376.85</strong></li>
+          </ul>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>5日高値 446 を上抜くと再上昇確認。当日安値 383 割れは短期崩れの目安。 20日線 376.85 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥389</strong> を基準に集計。最大上昇 <strong>4.88%</strong> / 最大下落 <strong>-1.80%</strong> / 最新終値差 <strong>-0.77%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥389</td><td>¥403</td><td>¥382</td><td>¥395</td><td>3.60%</td><td>-1.80%</td><td>1.54%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥395</td><td>¥408</td><td>¥386</td><td>¥386</td><td>4.88%</td><td>-0.77%</td><td>-0.77%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">10位 / Tier2</span>
+          <span class="score-chip">best=3.799</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>278A0 Ｔｅｒｒａ　Ｄｒｏｎｅ</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 精密機器</span>
+          <span>💰 ADV20: 1,121,430千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥6,480</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥7,128</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥5,962</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">4.6600%</div>
+          </div>
+          <div class="data-item chg-down">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-0.2200%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">4社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">11日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-22.50%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.120%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">39.41%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">177.000%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">30.65%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">44.32%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">120.41%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">2285.33</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>3.799</code> / 初動後押し目型: <code>3.799</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 4.66% / 空売り横ばい -0.0022 / 押し -22.5%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 4.66% / 押し -22.5% / 動意から11日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥6,950</strong></li>
+            <li>サポート (3日安値): <strong>¥5,510</strong></li>
+            <li>リスクライン: <strong>¥4,648.05</strong></li>
+            <li>MA20: <strong>¥4,648.05</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 6950 を上抜くと再上昇確認。3日安値 5510 割れは短期崩れの目安。 20日線 4648.05 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥6,570</strong> を基準に集計。最大上昇 <strong>5.02%</strong> / 最大下落 <strong>-7.15%</strong> / 最新終値差 <strong>-5.33%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥6,570</td><td>¥6,900</td><td>¥6,390</td><td>¥6,550</td><td>5.02%</td><td>-2.74%</td><td>-0.30%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥6,650</td><td>¥6,790</td><td>¥6,100</td><td>¥6,220</td><td>3.35%</td><td>-7.15%</td><td>-5.33%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">11位 / Tier2</span>
+          <span class="score-chip">best=3.039</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>68620 ミナトホールディングス</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 電気機器</span>
+          <span>💰 ADV20: 493,445千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥2,372</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥2,609</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥2,182</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">4.2600%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+0.1800%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">2社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">16日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-24.97%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.010%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">6.40%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">5.800%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">7.92%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">16.33%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">5.14%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">1165.4</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>3.039</code> / 初動後押し目型: <code>3.039</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 4.26% / 空売り横ばい +0.0018 / 押し -25.0%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 4.26% / 押し -25.0% / 動意から16日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥2,625</strong></li>
+            <li>サポート (3日安値): <strong>¥2,360</strong></li>
+            <li>リスクライン: <strong>¥2,229.35</strong></li>
+            <li>MA20: <strong>¥2,229.35</strong></li>
+          </ul>
+          <p class='obs'>陰線引けで、まだ戻り売りの圧力が残っています。</p>
+          <p class='trade-note'>5日高値 2625 を上抜くと再上昇確認。3日安値 2360 割れは短期崩れの目安。 20日線 2229.35 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥2,422</strong> を基準に集計。最大上昇 <strong>6.73%</strong> / 最大下落 <strong>-0.21%</strong> / 最新終値差 <strong>3.96%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥2,422</td><td>¥2,585</td><td>¥2,417</td><td>¥2,509</td><td>6.73%</td><td>-0.21%</td><td>3.59%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥2,559</td><td>¥2,560</td><td>¥2,498</td><td>¥2,518</td><td>5.70%</td><td>3.14%</td><td>3.96%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier2">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">12位 / Tier2</span>
+          <span class="score-chip">best=2.975</span>
+          <div class="strat-badges"><span class="strat-badge">📈 売り残蓄積型 (G_wide)</span><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>215A0 タイミー</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 サービス業</span>
+          <span>💰 ADV20: 1,645,750千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,319</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,451</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥1,213</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の10-15%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">3.1700%</div>
+          </div>
+          <div class="data-item chg-flat">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+0.0800%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">1社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">24日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-17.44%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.220%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">2.74%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">6.450%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">1.62%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">-3.51%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">10.84%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">1.36</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">0.45</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">1.37</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">売り残蓄積型: <code>2.975</code> / 初動後押し目型: <code>2.975</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>📈 &lt;code&gt;G_wide&lt;/code&gt;: JPX空売り 3.17% / 空売り横ばい +0.0008 / 押し -17.4%</li><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 3.17% / 押し -17.4% / 動意から24日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥1,338</strong></li>
+            <li>サポート (3日安値): <strong>¥1,197</strong></li>
+            <li>リスクライン: <strong>¥1,197</strong></li>
+            <li>MA20: <strong>¥1,283.85</strong></li>
+          </ul>
+          <p class='obs'>実体陽線で引けており、買いが優勢です。</p>
+          <p class='trade-note'>5日高値 1338 を上抜くと再上昇確認。3日安値 1197 割れは短期崩れの目安。 20日線 1283.85 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 件数を確保する実用枠。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,338</strong> を基準に集計。最大上昇 <strong>3.96%</strong> / 最大下落 <strong>-0.75%</strong> / 最新終値差 <strong>2.24%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,338</td><td>¥1,381</td><td>¥1,328</td><td>¥1,364</td><td>3.21%</td><td>-0.75%</td><td>1.94%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,384</td><td>¥1,391</td><td>¥1,350</td><td>¥1,368</td><td>3.96%</td><td>0.90%</td><td>2.24%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier3">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">13位 / Tier3</span>
+          <span class="score-chip">best=3.682</span>
+          <div class="strat-badges"><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>53410 ＡＳＡＨＩ　ＥＩＴＯホールディングス</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 ガラス･土石製品</span>
+          <span>💰 ADV20: 1,523,040千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥312</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥343</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥287</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の5-10%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">3.2100%</div>
+          </div>
+          <div class="data-item chg-up">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">+1.1900%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">1社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">5日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-16.56%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">1.410%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">35.21%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">6.300%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">2.97%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">42.47%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">67.74%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">35.73</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">初動後押し目型: <code>3.682</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 3.21% / 押し -16.6% / 動意から5日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (5日高値): <strong>¥350</strong></li>
+            <li>サポート (3日安値): <strong>¥267</strong></li>
+            <li>リスクライン: <strong>¥230.75</strong></li>
+            <li>MA20: <strong>¥230.75</strong></li>
+          </ul>
+          <p class='obs'>下ヒゲが長く、押し目を拾う買いが入った形です。</p>
+          <p class='trade-note'>5日高値 350 を上抜くと再上昇確認。3日安値 267 割れは短期崩れの目安。 20日線 230.75 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 補助戦略のみ通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥319</strong> を基準に集計。最大上昇 <strong>18.50%</strong> / 最大下落 <strong>-6.90%</strong> / 最新終値差 <strong>18.50%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥319</td><td>¥324</td><td>¥297</td><td>¥298</td><td>1.57%</td><td>-6.90%</td><td>-6.58%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥317</td><td>¥378</td><td>¥314</td><td>¥378</td><td>18.50%</td><td>-1.57%</td><td>18.50%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier3">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">14位 / Tier3</span>
+          <span class="score-chip">best=3.296</span>
+          <div class="strat-badges"><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>48840 クリングルファーマ</h2>
+        <div class="meta">
+          <span>📍 グロース</span>
+          <span>🏭 医薬品</span>
+          <span>💰 ADV20: 1,740,175千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥486</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥535</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥447</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の5-10%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">5.9700%</div>
+          </div>
+          <div class="data-item chg-down">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-1.0900%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">3社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">11日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-23.99%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.390%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">9.08%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">5.350%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">7.76%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">-4.89%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">28.23%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">初動後押し目型: <code>3.296</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 5.97% / 押し -24.0% / 動意から11日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥503</strong></li>
+            <li>サポート (当日安値): <strong>¥469</strong></li>
+            <li>リスクライン: <strong>¥445.55</strong></li>
+            <li>MA20: <strong>¥445.55</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 503 を上抜くと再上昇確認。当日安値 469 割れは短期崩れの目安。 20日線 445.55 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 補助戦略のみ通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥487</strong> を基準に集計。最大上昇 <strong>2.46%</strong> / 最大下落 <strong>-2.87%</strong> / 最新終値差 <strong>1.03%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥487</td><td>¥498</td><td>¥473</td><td>¥481</td><td>2.26%</td><td>-2.87%</td><td>-1.23%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥489</td><td>¥499</td><td>¥477</td><td>¥492</td><td>2.46%</td><td>-2.05%</td><td>1.03%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+    <section class="card tier3">
+      <div class="card-header">
+        <div class="rank-row">
+          <span class="tier-chip">15位 / Tier3</span>
+          <span class="score-chip">best=2.954</span>
+          <div class="strat-badges"><span class="strat-badge">🎯 初動後押し目型 (F_main)</span></div>
+        </div>
+        <h2>63660 千代田化工建設</h2>
+        <div class="meta">
+          <span>📍 スタンダード</span>
+          <span>🏭 建設業</span>
+          <span>💰 ADV20: 11,000,555千円</span>
+        </div>
+      </div>
+
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">前日終値</div>
+          <div class="price-val">¥1,155</div>
+        </div>
+        <div class="price-box tp-box">
+          <div class="price-label">TP +10%</div>
+          <div class="price-val tp">¥1,270</div>
+        </div>
+        <div class="price-box sl-box">
+          <div class="price-label">SL -8%</div>
+          <div class="price-val sl">¥1,063</div>
+        </div>
+        <div class="price-box alloc-box">
+          <div class="price-label">推奨配分</div>
+          <div class="price-val alloc">資金の5-10%</div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>JPX機関空売り（核心データ）</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">JPX空売り残 total_ratio</div>
+            <div class="data-val">3.6900%</div>
+          </div>
+          <div class="data-item chg-down">
+            <div class="data-label">変化 ratio_change</div>
+            <div class="data-val">-0.4600%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">機関数 n_sellers</div>
+            <div class="data-val">2社</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>動意・押し目・出来高</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">動意 N日前</div>
+            <div class="data-val">6日</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">高値からの押し dip_from_animated</div>
+            <div class="data-val">-11.22%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">vol5/adv20</div>
+            <div class="data-val">0.700%倍</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">close vs MA20</div>
+            <div class="data-val">10.79%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">MA20 slope</div>
+            <div class="data-val">0.350%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>リターン・信用・日証金</h3>
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="data-label">ret5</div>
+            <div class="data-val">-0.86%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret10</div>
+            <div class="data-val">18.22%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">ret20</div>
+            <div class="data-val">0.61%</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">信用倍率 (週次)</div>
+            <div class="data-val">31.83</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">日証金 貸借倍率</div>
+            <div class="data-val">-</div>
+          </div>
+          <div class="data-item">
+            <div class="data-label">貸株/ADV20</div>
+            <div class="data-val">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="data-section">
+        <h3>シグナルスコア</h3>
+        <div class="scores">初動後押し目型: <code>2.954</code></div>
+      </div>
+
+      <div class="columns">
+        <div>
+          <h3>候補理由（生データ）</h3>
+          <ul><li>🎯 &lt;code&gt;F_main&lt;/code&gt;: JPX空売り 3.69% / 押し -11.2% / 動意から6日</li></ul>
+        </div>
+        <div>
+          <h3>チャート監視ライン</h3>
+          <ul>
+            <li>ブレイク基準 (当日高値): <strong>¥1,226</strong></li>
+            <li>サポート (3日安値): <strong>¥1,100</strong></li>
+            <li>リスクライン: <strong>¥1,042.50</strong></li>
+            <li>MA20: <strong>¥1,042.50</strong></li>
+          </ul>
+          <p class='obs'>長い上ヒゲで戻り売りが出ています。高値更新できるか確認が必要です。</p>
+          <p class='trade-note'>当日高値 1226 を上抜くと再上昇確認。3日安値 1100 割れは短期崩れの目安。 20日線 1042.5 付近を保てるかも確認。</p>
+        </div>
+      </div>
+
+      <div class="tier-note">
+        <strong>Tier判定根拠:</strong> 補助戦略のみ通過。
+      </div>
+      
+      <div class="followup">
+        <h3>その後10営業日の推移（始値基準）</h3>
+        <p class="followup-summary">翌営業日の始値 <strong>¥1,166</strong> を基準に集計。最大上昇 <strong>0.60%</strong> / 最大下落 <strong>-9.01%</strong> / 最新終値差 <strong>-6.43%</strong></p>
+        <div class="followup-table-wrap">
+          <table class="followup-table">
+            <thead>
+              <tr><th>日数</th><th>日付</th><th>始値</th><th>高値</th><th>安値</th><th>終値</th><th>高値時</th><th>安値時</th><th>終値時</th></tr>
+            </thead>
+            <tbody><tr><td>1日目</td><td>2026-04-20</td><td>¥1,166</td><td>¥1,173</td><td>¥1,109</td><td>¥1,111</td><td>0.60%</td><td>-4.89%</td><td>-4.72%</td></tr><tr><td>2日目</td><td>2026-04-21</td><td>¥1,101</td><td>¥1,116</td><td>¥1,061</td><td>¥1,091</td><td>-4.29%</td><td>-9.01%</td><td>-6.43%</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    
+    </section>
+            
+
+    <div class="footnote">
+      <strong>このページは自分専用の詳細データです。</strong> 公開版（abstract）からはリンクされません。<br>
+      &lt;meta name="robots" content="noindex, nofollow"&gt; を設定済み。検索エンジンには載りません。<br>
+      生の数値・閾値・スコアを含むため、URLの取り扱いには注意してください。
+    </div>
+
+  </div>
+</body>
+</html>
